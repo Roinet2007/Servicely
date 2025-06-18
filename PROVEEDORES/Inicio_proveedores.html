@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Inicio</title>
+    <link rel="stylesheet" href="Inicio_proveedores.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="Inicio_proveedores.html" class="menu-item nav-active" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Solicitudes_proveedores.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Historial_proveedor.html" class="menu-item" data-tooltip="Historial">
+        <i class="bx bx-history"></i>
+        <span>Historial</span>
+        </a>
+
+        <a href="Ranking_proveedores.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cupones_proveedores.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Perfil_proveedores.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+        <!-- Explorar Proyectos -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="page-title animate-on-load">¡Bienvenido!</h1>
+        </div>
+        
+        <!-- Sección de Puntaje -->
+        <div class="score-section animate-on-load">
+            <div class="score-header">
+                <div class="score-title">Tu Puntaje de Proveedor</div>
+                <i class="fas fa-trophy" style="font-size: 2rem; opacity: 0.8;"></i>
+            </div>
+            
+            <div class="score-value">4.8<span style="font-size: 1.5rem; opacity: 0.8;">/5.0</span></div>
+            <div class="score-description">Estás entre los mejores proveedores de tu zona</div>
+            
+            <div class="score-stats">
+                <div class="score-stat">
+                    <div class="stat-label">Posición en ranking</div>
+                    <div class="stat-value">#3</div>
+                </div>
+                <div class="score-stat">
+                    <div class="stat-label">Clientes satisfechos</div>
+                    <div class="stat-value">92%</div>
+                </div>
+                <div class="score-stat">
+                    <div class="stat-label">Tiempo respuesta</div>
+                    <div class="stat-value">24h</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Tarjeta 1: Servicios Pendientes -->
+            <div class="card animate-on-load">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Servicios Pendientes</div>
+                        <div class="stat-description">Por completar esta semana</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                </div>
+                <div class="stat-number">2</div>
+                <span class="progress-badge">
+                    <i class="fas fa-arrow-up"></i> 25% desde ayer
+                </span>
+            </div>
+            
+            <!-- Tarjeta 2: Nuevas Solicitudes -->
+            <div class="card animate-on-load delay-1">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Nuevas Solicitudes</div>
+                        <div class="stat-description">Clientes potenciales</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="requests-list">
+                    <div class="request-item">
+                        <div class="request-avatar">
+                            <img src="https://i.imgur.com/pDgv7WZ.jpg" alt="Pedro Gómez">
+                        </div>
+                        <div class="request-info">
+                            <h4>Pedro Gómez</h4>
+                            <p><i class="fas fa-bolt"></i> Electricista - Urgente</p>
+                        </div>
+                        <div class="request-time">Hoy</div>
+                    </div>
+                    <div class="request-item">
+                        <div class="request-avatar">
+                            <img src="https://i.imgur.com/QqY9ztX.jpg" alt="Laura Díaz">
+                        </div>
+                        <div class="request-info">
+                            <h4>Laura Díaz</h4>
+                            <p><i class="fas fa-tint"></i> Plomería - Fuga de agua</p>
+                        </div>
+                        <div class="request-time">Hoy</div>
+                    </div>
+                    <div class="request-item">
+                        <div class="request-avatar">
+                            <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Mario Ruiz">
+                        </div>
+                        <div class="request-info">
+                            <h4>Mario Ruiz</h4>
+                            <p><i class="fas fa-tools"></i> Mantenimiento general</p>
+                        </div>
+                        <div class="request-time">Ayer</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3: Completados este mes -->
+            <div class="card animate-on-load delay-2">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Completados este mes</div>
+                        <div class="stat-description">Servicios finalizados</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="stat-number">8</div>
+                <span class="progress-badge">
+                    <i class="fas fa-arrow-up"></i> +2 respecto al mes pasado
+                </span>
+            </div>
+        </div>
+        
+        <!-- Actividad Reciente -->
+        <div class="activity-card animate-on-load delay-2">
+            <div class="activity-header">
+                <div class="activity-title">Actividad Reciente</div>
+                <a href="#" class="view-all">Ver todo <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h4>Solicitud completada</h4>
+                        <p>Reparación eléctrica en oficina principal para el cliente TechSolutions Inc.</p>
+                        <div class="activity-time">
+                            <i class="far fa-clock"></i> Hace 2 horas
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h4>Nuevo mensaje</h4>
+                        <p>Laura Díaz ha enviado detalles adicionales sobre el problema de plomería.</p>
+                        <div class="activity-time">
+                            <i class="far fa-clock"></i> Hace 5 horas
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h4>Nueva calificación</h4>
+                        <p>Recibiste 5 estrellas por el servicio de mantenimiento en el edificio Zenith.</p>
+                        <div class="activity-time">
+                            <i class="far fa-clock"></i> Ayer
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h4>Pago recibido</h4>
+                        <p>Transferencia por $1,250.00 MXN por servicio de instalación eléctrica.</p>
+                        <div class="activity-time">
+                            <i class="far fa-clock"></i> Ayer
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h4>Nuevo ranking</h4>
+                        <p>Ahora estás en el top 5 de proveedores de electricidad en tu zona.</p>
+                        <div class="activity-time">
+                            <i class="far fa-clock"></i> 2 días
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Inicio_proveedores.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

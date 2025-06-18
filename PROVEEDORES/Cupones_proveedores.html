@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Cupones</title>
+    <link rel="stylesheet" href="Cupones_proveedores.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="Inicio_proveedores.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Solicitudes_proveedores.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Historial_proveedor.html" class="menu-item" data-tooltip="Historial">
+        <i class="bx bx-history"></i>
+        <span>Historial</span>
+        </a>
+
+        <a href="Ranking_proveedores.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cupones_proveedores.html" class="menu-item nav-active" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Perfil_proveedores.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+        <!-- Explorar Proyectos -->
+    <div class="main-content">
+        <!-- Encabezado -->
+        <div class="header">
+            <div>
+                <h1 class="page-title animate-on-load">Cupones para Proveedores</h1>
+                <span class="coupons-count animate-on-load">
+                    <i class="fas fa-tag"></i> 3 cupones disponibles
+                </span>
+            </div>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container animate-on-load">
+            <div class="status-filter">
+                <span class="filter-label">Estado:</span>
+                <select class="filter-select">
+                    <option selected>Todos</option>
+                    <option>Activos</option>
+                    <option>Próximos a expirar</option>
+                    <option>Expirados</option>
+                    <option>Para proveedores</option>
+                </select>
+            </div>
+            
+            <div class="search-filter">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Buscar cupones...">
+            </div>
+        </div>
+        
+        <!-- Contenedor de cupones activos -->
+        <div class="coupons-container animate-on-load delay-1">
+            <div class="coupons-header">
+                <div>
+                    <h2 class="coupons-title">Cupones Activos</h2>
+                    <p class="coupons-subtitle">Beneficios exclusivos para nuestros proveedores</p>
+                </div>
+                <i class="fas fa-tags" style="font-size: 2rem; color: var(--provider-color);"></i>
+            </div>
+            
+            <div class="coupons-grid">
+                <!-- Cupón 1 - Bienvenida para proveedores -->
+                <div class="coupon-card provider">
+                    <span class="coupon-badge provider">Exclusivo</span>
+                    <span class="welcome-badge">Bienvenida</span>
+                    <div class="coupon-value">15% OFF</div>
+                    <h3 class="coupon-title">Descuento en Materiales</h3>
+                    <div class="coupon-code">
+                        <span>PROVEEDOR15</span>
+                        <i class="far fa-copy copy-icon" data-code="PROVEEDOR15"></i>
+                    </div>
+                    <p class="coupon-details">Cupón de bienvenida para nuevos proveedores. Aplica en compras de materiales en nuestras sucursales físicas. Válido para primera compra.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 15/12/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 1 uso restante</span>
+                    </div>
+                    <button class="coupon-btn" onclick="showConfirmation('PROVEEDOR15')">
+                        <i class="fas fa-store"></i> Usar en Sucursal
+                    </button>
+                </div>
+                
+                <!-- Cupón 2 - Para proveedores frecuentes -->
+                <div class="coupon-card provider">
+                    <span class="coupon-badge provider">Exclusivo</span>
+                    <div class="coupon-value">10% OFF</div>
+                    <h3 class="coupon-title">Materiales de Construcción</h3>
+                    <div class="coupon-code">
+                        <span>CONSTRU10</span>
+                        <i class="far fa-copy copy-icon" data-code="CONSTRU10"></i>
+                    </div>
+                    <p class="coupon-details">Descuento en materiales de construcción para proveedores con más de 10 servicios completados. Mínimo de compra $100.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 30/11/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 2 usos restantes</span>
+                    </div>
+                    <button class="coupon-btn" onclick="showConfirmation('CONSTRU10')">
+                        <i class="fas fa-store"></i> Usar en Sucursal
+                    </button>
+                </div>
+                
+                <!-- Cupón 3 - Especial para herramientas -->
+                <div class="coupon-card provider">
+                    <span class="coupon-badge provider">Exclusivo</span>
+                    <div class="coupon-value">$50 OFF</div>
+                    <h3 class="coupon-title">Herramientas Profesionales</h3>
+                    <div class="coupon-code">
+                        <span>HERRAM50</span>
+                        <i class="far fa-copy copy-icon" data-code="HERRAM50"></i>
+                    </div>
+                    <p class="coupon-details">Descuento fijo en compra de herramientas profesionales. Válido en todas las sucursales para proveedores registrados.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 31/12/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 1 uso restante</span>
+                    </div>
+                    <div class="coupon-actions">
+                        <button class="coupon-btn" onclick="showConfirmation('HERRAM50')">
+                            <i class="fas fa-store"></i> Usar
+                        </button>
+                        <button class="coupon-btn secondary">
+                            <i class="fas fa-share-alt"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección de cupones expirados -->
+        <div class="expired-section animate-on-load delay-2">
+            <div class="expired-header">
+                <h2 class="expired-title">Cupones Expirados</h2>
+                <i class="fas fa-history" style="font-size: 2rem; color: var(--danger);"></i>
+            </div>
+            <p class="expired-description">Estos cupones ya no están disponibles para su uso</p>
+            
+            <div class="coupons-grid">
+                <!-- Cupón 4 - Expirado -->
+                <div class="coupon-card expired">
+                    <span class="coupon-badge expired">Expirado</span>
+                    <div class="coupon-value">20% OFF</div>
+                    <h3 class="coupon-title">Aniversario Proveedores</h3>
+                    <div class="coupon-code">
+                        <span>ANIVPRO20</span>
+                        <i class="far fa-copy copy-icon" data-code="ANIVPRO20"></i>
+                    </div>
+                    <p class="coupon-details">Promoción especial por nuestro aniversario. Válido para cualquier compra en sucursales durante mayo 2023.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Venció: 31/05/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 0 usos restantes</span>
+                    </div>
+                    <button class="coupon-btn expired" disabled>
+                        <i class="fas fa-ban"></i> Expirado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="modal-title">¡Cupón listo para usar!</h2>
+                <p class="modal-message">Este código de cupón ha sido copiado a tu portapapeles. Preséntalo en nuestra sucursal de materiales.</p>
+                <div class="modal-code" id="modalCouponCode"></div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn primary" onclick="redirectToLocations()">
+                    <i class="fas fa-map-marker-alt"></i> Ver Sucursales
+                </button>
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="Cupones_proveedores.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

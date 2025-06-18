@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Historial</title>
+    <link rel="stylesheet" href="Historial_proveedor.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="Inicio_proveedores.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Solicitudes_proveedores.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Historial_proveedor.html" class="menu-item nav-active" data-tooltip="Historial">
+        <i class="bx bx-history"></i>
+        <span>Historial</span>
+        </a>
+
+        <a href="Ranking_proveedores.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cupones_proveedores.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Perfil_proveedores.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">  
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <div class="content-header">
+                <h1 class="page-title">Mi Historial</h1>
+            </div>
+            
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-client">
+                        <img src="https://i.imgur.com/pDgv7WZ.jpg" alt="Pedro Gómez" class="job-avatar">
+                        <div class="job-client-info">
+                            <h4>Pedro Gómez</h4>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+52 55 1234 5678</span>
+                            </p>
+                        </div>
+                    </div>
+                    <span class="job-status status-completed">Completado</span>
+                </div>
+                
+                <div class="job-details">
+                    <h3 class="job-title">Reparación de instalación eléctrica</h3>
+                    <p class="job-description">
+                        Se realizó la reparación del tablero eléctrico principal que presentaba fallas en los interruptores termomagnéticos. Se reemplazaron 3 interruptores y se verificó el correcto funcionamiento de toda la instalación.
+                    </p>
+                    
+                    <div class="job-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>15 Jun, 2023</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 horas 15 min</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Principal 123, Col. Centro</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$2,300 MXN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-footer">
+                    <div class="job-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.5</span>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="action-btn action-btn-secondary">
+                            <i class="fas fa-eye"></i>
+                            <span>Detalles</span>
+                        </button>
+                        <button class="action-btn action-btn-primary">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Factura</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-client">
+                        <img src="https://i.imgur.com/QqY9ztX.jpg" alt="Laura Díaz" class="job-avatar">
+                        <div class="job-client-info">
+                            <h4>Laura Díaz</h4>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+52 55 9876 5432</span>
+                            </p>
+                        </div>
+                    </div>
+                    <span class="job-status status-completed">Completado</span>
+                </div>
+                
+                <div class="job-details">
+                    <h3 class="job-title">Reparación de fuga de agua en cocina</h3>
+                    <p class="job-description">
+                        Se localizó y reparó una fuga en la tubería principal bajo el fregadero de la cocina. Se reemplazó la sección dañada de la tubería y se realizó prueba de presión para asegurar que no hubiera más fugas.
+                    </p>
+                    
+                    <div class="job-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>14 Jun, 2023</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>1 hora 45 min</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Flores 45, Col. Jardines</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$1,800 MXN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-footer">
+                    <div class="job-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="action-btn action-btn-secondary">
+                            <i class="fas fa-eye"></i>
+                            <span>Detalles</span>
+                        </button>
+                        <button class="action-btn action-btn-primary">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Factura</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-client">
+                        <img src="https://i.imgur.com/LmU5P3x.jpg" alt="Roberto Vargas" class="job-avatar">
+                        <div class="job-client-info">
+                            <h4>Roberto Vargas</h4>
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+52 55 2468 1357</span>
+                            </p>
+                        </div>
+                    </div>
+                    <span class="job-status status-cancelled">Cancelado</span>
+                </div>
+                
+                <div class="job-details">
+                    <h3 class="job-title">Reparación de tubería principal</h3>
+                    <p class="job-description">
+                        El cliente canceló el servicio después de que se identificó el problema. Decidió contratar a otro proveedor que le ofreció un precio menor por el mismo trabajo.
+                    </p>
+                    
+                    <div class="job-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>8 Jun, 2023</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>30 min (diagnóstico)</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Roble 34, Col. Bosques</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$300 MXN (diagnóstico)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-footer">
+                    <div class="job-rating">
+                        <span class="rating-value">No calificado</span>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="action-btn action-btn-secondary">
+                            <i class="fas fa-eye"></i>
+                            <span>Detalles</span>
+                        </button>
+                        <button class="action-btn action-btn-primary">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Factura</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="Historial_proveedor.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

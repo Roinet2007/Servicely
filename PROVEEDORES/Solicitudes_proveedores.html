@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Solicitudes</title>
+    <link rel="stylesheet" href="Solicitudes_proveedores.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="Inicio_proveedores.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Solicitudes_proveedores.html" class="menu-item nav-active" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Historial_proveedor.html" class="menu-item" data-tooltip="Historial">
+        <i class="bx bx-history"></i>
+        <span>Historial</span>
+        </a>
+
+        <a href="Ranking_proveedores.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cupones_proveedores.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+
+        <a href="Perfil_proveedores.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="page-title">Solicitudes de Servicio</h1>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container">
+            <h3 class="filter-title">Filtrar por:</h3>
+            <div class="filter-options">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Pendientes</button>
+                <button class="filter-btn">Aceptadas</button>
+                <button class="filter-btn">Rechazadas</button>
+                <button class="filter-btn">Urgentes</button>
+                <button class="filter-btn">Este mes</button>
+            </div>
+        </div>
+        
+        <!-- Lista de solicitudes -->
+        <div class="requests-container">
+            <div class="requests-header">
+                <h3 class="requests-title">Todas las solicitudes</h3>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar solicitudes...">
+                </div>
+            </div>
+            
+            <div class="requests-list">
+                <!-- Solicitud 1 -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/pDgv7WZ.jpg" alt="Pedro Gómez">
+                    </div>
+                    <div class="request-info">
+                        <h4>Pedro Gómez <span class="request-status status-pending">Pendiente</span></h4>
+                        <p><i class="fas fa-bolt"></i> Reparación de instalación eléctrica</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Col. Centro</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> Hoy, 10:30 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn accept-btn" title="Aceptar">
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="action-btn reject-btn" title="Rechazar">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 2 -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/QqY9ztX.jpg" alt="Laura Díaz">
+                    </div>
+                    <div class="request-info">
+                        <h4>Laura Díaz <span class="request-status status-pending">Pendiente</span></h4>
+                        <p><i class="fas fa-tint"></i> Fuga de agua en cocina</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Calle Flores 45, Col. Jardines</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> Hoy, 8:15 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn accept-btn" title="Aceptar">
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="action-btn reject-btn" title="Rechazar">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 3 -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Mario Ruiz">
+                    </div>
+                    <div class="request-info">
+                        <h4>Mario Ruiz <span class="request-status status-pending">Pendiente</span></h4>
+                        <p><i class="fas fa-tools"></i> Mantenimiento preventivo a aire acondicionado</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Blvd. Tecnológico 789, Zona Industrial</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> Ayer, 4:45 PM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn accept-btn" title="Aceptar">
+                            <i class="fas fa-check"></i>
+                        </button>
+                        <button class="action-btn reject-btn" title="Rechazar">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 4 -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/JqYeZ0i.jpg" alt="Ana Sánchez">
+                    </div>
+                    <div class="request-info">
+                        <h4>Ana Sánchez <span class="request-status status-accepted">Aceptada</span></h4>
+                        <p><i class="fas fa-plug"></i> Instalación de tomas eléctricas nuevas</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Privada Orquídeas 12, Col. Las Flores</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 12 Jun, 9:00 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 5 -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/LmU5P3x.jpg" alt="Roberto Vargas">
+                    </div>
+                    <div class="request-info">
+                        <h4>Roberto Vargas <span class="request-status status-rejected">Rechazada</span></h4>
+                        <p><i class="fas fa-wrench"></i> Reparación de tubería principal</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Calle Roble 34, Col. Bosques</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 10 Jun, 2:30 PM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Detalles -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Detalles de la Solicitud</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="client-profile">
+                    <img src="https://i.imgur.com/pDgv7WZ.jpg" alt="Pedro Gómez" class="client-avatar">
+                    <div class="client-info">
+                        <h4>Pedro Gómez</h4>
+                        <p><i class="fas fa-phone-alt"></i> +52 55 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> pedro.gomez@example.com</p>
+                        <div class="client-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            (4.5)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-details">
+                    <h5>Detalles del Servicio</h5>
+                    <p>El cliente reporta que no tiene energía eléctrica en toda la planta baja de su casa. Sospecha que puede ser un problema con el tablero principal.</p>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Tipo de servicio:</div>
+                        <div class="detail-value">Reparación eléctrica</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Urgencia:</div>
+                        <div class="detail-value">Alta (sin electricidad)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Fecha preferente:</div>
+                        <div class="detail-value">Hoy, lo antes posible</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Dirección:</div>
+                        <div class="detail-value">Av. Principal 123, Col. Centro, CP 12345</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Presupuesto estimado:</div>
+                        <div class="detail-value">$1,500 - $2,500 MXN</div>
+                    </div>
+
+                    <!-- Mapa de ubicación -->
+                    <div class="map-container">
+                        <div id="clientLocationMap"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary close-modal">Cerrar</button>
+                <button class="modal-btn modal-btn-primary">Aceptar Solicitud</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Rechazo -->
+    <div class="modal" id="rejectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Rechazar Solicitud</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro que deseas rechazar esta solicitud de servicio? Se notificará al equipo de Servicely y se enviará el perfil del cliente para que puedan asignar a otro proveedor.</p>
+                
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="rejectReason" style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-color);">Razón del rechazo (opcional):</label>
+                    <textarea id="rejectReason" rows="3" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.1); font-family: 'Poppins', sans-serif; resize: none;"></textarea>
+                </div>
+                
+                <div class="client-profile" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="https://i.imgur.com/pDgv7WZ.jpg" alt="Pedro Gómez" class="client-avatar" style="width: 50px; height: 50px;">
+                    <div class="client-info">
+                        <h4 style="font-size: 1rem;">Pedro Gómez</h4>
+                        <p style="font-size: 0.85rem;"><i class="fas fa-bolt"></i> Reparación de instalación eléctrica</p>
+                        <p style="font-size: 0.8rem;"><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Col. Centro</p>
+                        <p style="font-size: 0.8rem;"><i class="fas fa-phone-alt"></i> +52 55 1234 5678</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary close-modal">Cancelar</button>
+                <button class="modal-btn modal-btn-primary" style="background: var(--error-color);" id="confirmRejectBtn">Confirmar Rechazo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="Solicitudes_proveedores.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

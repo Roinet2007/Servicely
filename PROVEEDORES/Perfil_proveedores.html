@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Perfil</title>
+    <link rel="stylesheet" href="Perfil_proveedores.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="Inicio_proveedores.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Solicitudes_proveedores.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Historial_proveedor.html" class="menu-item" data-tooltip="Historial">
+        <i class="bx bx-history"></i>
+        <span>Historial</span>
+        </a>
+
+        <a href="Ranking_proveedores.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cupones_proveedores.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+
+        <a href="Perfil_proveedores.html" class="menu-item nav-active" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <div class="container">
+            <div class="profile-container">
+                <aside class="profile-sidebar">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de perfil" class="profile-pic" id="profile-pic">
+                    <input type="file" id="profile-upload" style="display: none;" accept="image/*">
+                    <button class="edit-btn1" onclick="document.getElementById('profile-upload').click()">
+                        <i class="fas fa-camera"></i> Cambiar foto
+                    </button>
+                    
+                    <h2 class="profile-name" id="profile-name">Luis Araúz</h2>
+                    <p class="profile-role">Proveedor desde: Junio 2022</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">42</div>
+                            <div class="stat-label">Servicios</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.8</div>
+                            <div class="stat-label">Calificación</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">92%</div>
+                            <div class="stat-label">Respuesta</div>
+                        </div>
+                    </div>
+                    
+                    <div class="account-status">
+                        <div class="status-label">Estado de cuenta</div>
+                        <div class="status-value flash" id="account-status">Flash Activa</div>
+                    </div>
+                </aside>
+                
+                <main class="profile-content">
+                    <div class="personal-info">
+                        <h2 class="section-title">
+                            Información profesional
+                            <button class="edit-btn" id="edit-personal-btn">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                        </h2>
+                        
+                        <div class="profile-info" id="personal-info-display">
+                            <div class="info-group">
+                                <div class="info-label">Nombre completo</div>
+                                <div class="info-value" id="display-name">Luis Araúz</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Correo electrónico</div>
+                                <div class="info-value" id="display-email">luis.arauz@example.com</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Teléfono</div>
+                                <div class="info-value" id="display-phone">+507 654232678</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Especialidad principal</div>
+                                <div class="info-value" id="display-specialty">Electricista</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Años de experiencia</div>
+                                <div class="info-value" id="display-experience">5 años</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Cédula profesional</div>
+                                <div class="info-value" id="display-dni">9-122-3241</div>
+                            </div>
+                        </div>
+                        
+                        <div class="edit-form" id="personal-info-edit">
+                            <div class="profile-info">
+                                <div class="form-group">
+                                    <label for="edit-name">Nombre completo</label>
+                                    <input type="text" id="edit-name" value="Roinet Pita">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-email">Correo electrónico</label>
+                                    <input type="email" id="edit-email" value="roinet.pita@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-phone">Teléfono</label>
+                                    <input type="tel" id="edit-phone" value="+507 65423678">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-specialty">Especialidad principal</label>
+                                    <select id="edit-specialty">
+                                        <option value="Electricista">Electricista</option>
+                                        <option value="Fontanero">Fontanero</option>
+                                        <option value="Carpintero">Carpintero</option>
+                                        <option value="Mecánico">Mecánico</option>
+                                        <option value="Jardinero">Jardinero</option>
+                                        <option value="Pintor">Pintor</option>
+                                        <option value="Albañil">Albañil</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-experience">Años de experiencia</label>
+                                    <input type="number" id="edit-experience" value="5" min="0" max="50">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-dni">Cédula profesional</label>
+                                    <input type="text" id="edit-dni" value="9-122-3241">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn" id="cancel-personal-edit">Cancelar</button>
+                                <button class="save-btn" id="save-personal-edit">Guardar cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Descripción del perfil -->
+                    <div class="profile-description">
+                        <h2 class="section-title">
+                            Descripción de tu perfil
+                            <button class="edit-btn" id="edit-desc-btn">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                        </h2>
+                        
+                        <div id="description-display">
+                            <p class="description-text" id="display-description">
+                                Electricista profesional con más de 5 años de experiencia en instalaciones residenciales y comerciales. 
+                                Especializado en sistemas de iluminación eficiente y paneles solares. 
+                                Ofrezco servicios de calidad con garantía y atención personalizada.
+                            </p>
+                        </div>
+                        
+                        <div class="edit-form" id="description-edit">
+                            <div class="form-group">
+                                <label for="edit-description">Descripción de tu perfil</label>
+                                <textarea id="edit-description" rows="5">Electricista profesional con más de 5 años de experiencia en instalaciones residenciales y comerciales. 
+Especializado en sistemas de iluminación eficiente y paneles solares. 
+Ofrezco servicios de calidad con garantía y atención personalizada.</textarea>
+                                <small class="form-text">Describe tus servicios, experiencia y lo que te diferencia</small>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn" id="cancel-desc-edit">Cancelar</button>
+                                <button class="save-btn" id="save-desc-edit">Guardar cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta Flash -->
+                    <div class="flash-card" id="flash-card">
+                        <div class="flash-card-header">
+                            <div class="flash-card-title">
+                                <i class="fas fa-bolt"></i>
+                                <span>Cuenta Flash</span>
+                            </div>
+                            <div class="flash-card-badge" id="flash-badge">ACTIVA</div>
+                        </div>
+                        <div class="flash-card-content" id="flash-content">
+                            Tu cuenta Flash está activada, lo que significa que recibirás solicitudes urgentes y deberás responder en el tiempo establecido para mantener tu estatus.
+                        </div>
+                        <div class="flash-card-stats">
+                            <div class="flash-stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Tiempo respuesta: 30 min</span>
+                            </div>
+                            <div class="flash-stat">
+                                <i class="fas fa-percentage"></i>
+                                <span>Tasa aceptación: 92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preferences">
+                        <h2 class="section-title">
+                            Configuración de servicios
+                            <button class="edit-btn" id="edit-prefs-btn">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                        </h2>
+                        
+                        <div class="profile-info" id="prefs-info-display">
+                            <div class="info-group">
+                                <div class="info-label">Cuenta Flash</div>
+                                <div class="info-value" id="display-flash">Activada</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Tiempo de respuesta</div>
+                                <div class="info-value" id="display-response">30 minutos</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Servicios ofrecidos</div>
+                                <div class="info-value" id="display-services">Instalación eléctrica, Reparaciones generales, Mantenimiento preventivo</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Transporte propio</div>
+                                <div class="info-value" id="display-transport">Sí</div>
+                            </div>
+                            <div class="info-group">
+                                <div class="info-label">Perfil público</div>
+                                <div class="info-value" id="display-public">Activado</div>
+                            </div>
+                        </div>
+                        
+                        <div class="edit-form" id="prefs-info-edit">
+                            <div class="profile-info">
+                                <div class="form-group">
+                                    <label for="edit-flash">Cuenta Flash</label>
+                                    <select id="edit-flash">
+                                        <option value="on">Activada</option>
+                                        <option value="off">Desactivada</option>
+                                    </select>
+                                    <small class="form-text">Activar para recibir solicitudes urgentes con mayor prioridad</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-response">Tiempo de respuesta máximo</label>
+                                    <select id="edit-response">
+                                        <option value="15">15 minutos (Flash Premium)</option>
+                                        <option value="30" selected>30 minutos (Flash Estándar)</option>
+                                        <option value="60">1 hora</option>
+                                        <option value="120">2 horas</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-services">Servicios ofrecidos</label>
+                                    <select id="edit-services" multiple>
+                                        <option value="electricidad" selected>Instalación eléctrica</option>
+                                        <option value="reparaciones" selected>Reparaciones generales</option>
+                                        <option value="mantenimiento" selected>Mantenimiento preventivo</option>
+                                        <option value="fontaneria">Fontanería</option>
+                                        <option value="carpinteria">Carpintería</option>
+                                        <option value="jardineria">Jardinería</option>
+                                        <option value="pintura">Pintura</option>
+                                        <option value="albanileria">Albañilería</option>
+                                    </select>
+                                    <small class="form-text">Mantén presionado Ctrl (Windows) o Cmd (Mac) para seleccionar múltiples</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-custom-service">Agregar servicio personalizado</label>
+                                    <div style="display: flex; gap: 10px;">
+                                        <input type="text" id="edit-custom-service" placeholder="Ej: Instalación de cámaras">
+                                        <button class="save-btn" id="add-custom-service" style="padding: 10px;">Agregar</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-transport">Transporte propio</label>
+                                    <select id="edit-transport">
+                                        <option value="yes">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <small class="form-text">¿Cuentas con vehículo para desplazarte a los servicios?</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-public">Perfil público</label>
+                                    <select id="edit-public">
+                                        <option value="on">Activado</option>
+                                        <option value="off">Desactivado</option>
+                                    </select>
+                                    <small class="form-text">Tu perfil será visible para clientes en la plataforma</small>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn" id="cancel-prefs-edit">Cancelar</button>
+                                <button class="save-btn" id="save-prefs-edit">Guardar cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="verification">
+                        <h2 class="section-title">
+                            Verificación de cuenta
+                        </h2>
+                        <p>Completa la verificación de tu cuenta para aumentar tu visibilidad y credibilidad ante los clientes.</p>
+                        
+                        <div class="verification-steps">
+                            <div class="verification-step">
+                                <i class="fas fa-id-card verified"></i>
+                                <span>Identificación verificada</span>
+                            </div>
+                            <div class="verification-step">
+                                <i class="fas fa-phone-alt verified"></i>
+                                <span>Teléfono verificado</span>
+                            </div>
+                            <div class="verification-step">
+                                <i class="fas fa-envelope verified"></i>
+                                <span>Email verificado</span>
+                            </div>
+                            <div class="verification-step">
+                                <i class="fas fa-badge-check pending"></i>
+                                <span>Certificación profesional</span>
+                            </div>
+                            <div class="verification-step">
+                                <i class="fas fa-home pending"></i>
+                                <span>Dirección verificada</span>
+                            </div>
+                        </div>
+                        
+                        <button class="verify-btn">
+                            <i class="fas fa-shield-alt"></i> Completar verificación
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Perfil_proveedores.js"></script>
+    <script src="slideshow.js"></script>
+    
+</body>
+</html>
