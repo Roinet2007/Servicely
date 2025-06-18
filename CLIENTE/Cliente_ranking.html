@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Ranking</title>
+    <link rel="stylesheet" href="Cliente_ranking.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item nav-active" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Encabezado -->
+        <div class="header">
+            <div>
+                <h1 class="page-title animate-on-load">Ranking de Clientes</h1>
+                <span class="location-tag animate-on-load">
+                    <i class="fas fa-map-marker-alt"></i> Veraguas, Panamá
+                </span>
+            </div>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container animate-on-load">
+            <div class="category-filter">
+                <span class="filter-label">Categoría:</span>
+                <select class="filter-select">
+                    <option>Todos los clientes</option>
+                    <option selected>Clientes frecuentes</option>
+                    <option>Clientes premium</option>
+                    <option>Clientes nuevos</option>
+                </select>
+            </div>
+            
+            <div class="time-filter">
+                <button class="time-btn active">Este mes</button>
+                <button class="time-btn">Trimestre</button>
+                <button class="time-btn">Año</button>
+                <button class="time-btn">Todo el tiempo</button>
+            </div>
+        </div>
+        
+        <!-- Contenedor de ranking -->
+        <div class="ranking-container animate-on-load delay-1">
+            <div class="ranking-header">
+                <div>
+                    <h2 class="ranking-title">Top 10 Clientes - Veraguas</h2>
+                    <p class="ranking-subtitle">Ranking basado en solicitudes realizadas este mes</p>
+                </div>
+                <i class="fas fa-medal" style="font-size: 2rem; color: var(--gold);"></i>
+            </div>
+            
+            <div class="ranking-list">
+                <!-- Primer puesto -->
+                <div class="ranking-item">
+                    <div class="ranking-position first">1</div>
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="María Rodríguez" class="ranking-avatar" onclick="openModal('María Rodríguez', 'Cliente frecuente', 'https://randomuser.me/api/portraits/women/65.jpg', 28, 4.9, 15, 'Santiago, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">María Rodríguez <span class="you-badge">TÚ</span></div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Santiago, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente frecuente</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.9 (15 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2021</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count max">28</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 1°</div>
+                </div>
+                
+                <!-- Segundo puesto -->
+                <div class="ranking-item">
+                    <div class="ranking-position second">2</div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos López" class="ranking-avatar" onclick="openModal('Carlos López', 'Cliente premium', 'https://randomuser.me/api/portraits/men/32.jpg', 24, 4.8, 12, 'Atalaya, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Carlos López</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Atalaya, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente premium</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.8 (12 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2022</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 2°</div>
+                </div>
+                
+                <!-- Tercer puesto -->
+                <div class="ranking-item">
+                    <div class="ranking-position third">3</div>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Martínez" class="ranking-avatar" onclick="openModal('Ana Martínez', 'Cliente frecuente', 'https://randomuser.me/api/portraits/women/44.jpg', 21, 4.7, 18, 'Santa Fe, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Ana Martínez</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Santa Fe, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente frecuente</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.7 (18 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2020</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">21</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 3°</div>
+                </div>
+                
+                <!-- Cuarto puesto -->
+                <div class="ranking-item">
+                    <div class="ranking-position">4</div>
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto García" class="ranking-avatar" onclick="openModal('Roberto García', 'Cliente premium', 'https://randomuser.me/api/portraits/men/75.jpg', 19, 4.9, 22, 'Santiago, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Roberto García</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Santiago, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente premium</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.9 (22 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2019</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 4°</div>
+                </div>
+                
+                <!-- Quinto puesto -->
+                <div class="ranking-item">
+                    <div class="ranking-position">5</div>
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Laura Fernández" class="ranking-avatar" onclick="openModal('Laura Fernández', 'Cliente frecuente', 'https://randomuser.me/api/portraits/women/33.jpg', 17, 4.5, 10, 'Montijo, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Laura Fernández</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Montijo, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente frecuente</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.5 (10 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2021</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">17</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 5°</div>
+                </div>
+                
+                <!-- Puestos 6-10 -->
+                <div class="ranking-item">
+                    <div class="ranking-position">6</div>
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="José Pérez" class="ranking-avatar" onclick="openModal('José Pérez', 'Cliente nuevo', 'https://randomuser.me/api/portraits/men/68.jpg', 15, 4.6, 8, 'Las Palmas, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">José Pérez</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Las Palmas, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente nuevo</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.6 (8 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2023</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">15</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 6°</div>
+                </div>
+                
+                <div class="ranking-item">
+                    <div class="ranking-position">7</div>
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Patricia Sánchez" class="ranking-avatar" onclick="openModal('Patricia Sánchez', 'Cliente frecuente', 'https://randomuser.me/api/portraits/women/28.jpg', 14, 4.7, 12, 'Soná, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Patricia Sánchez</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Soná, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente frecuente</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.7 (12 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2021</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">14</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 7°</div>
+                </div>
+                
+                <div class="ranking-item">
+                    <div class="ranking-position">8</div>
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Luis Ramírez" class="ranking-avatar" onclick="openModal('Luis Ramírez', 'Cliente premium', 'https://randomuser.me/api/portraits/men/45.jpg', 13, 4.8, 16, 'Calobre, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Luis Ramírez</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Calobre, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente premium</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.8 (16 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2020</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">13</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 8°</div>
+                </div>
+                
+                <div class="ranking-item">
+                    <div class="ranking-position">9</div>
+                    <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Sofía Mendoza" class="ranking-avatar" onclick="openModal('Sofía Mendoza', 'Cliente nuevo', 'https://randomuser.me/api/portraits/women/52.jpg', 12, 4.3, 5, 'Río de Jesús, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Sofía Mendoza</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> Río de Jesús, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente nuevo</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.3 (5 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2023</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 9°</div>
+                </div>
+                
+                <div class="ranking-item">
+                    <div class="ranking-position">10</div>
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Juan González" class="ranking-avatar" onclick="openModal('Juan González', 'Cliente frecuente', 'https://randomuser.me/api/portraits/men/22.jpg', 11, 4.6, 9, 'San Francisco, Veraguas')">
+                    <div class="ranking-info">
+                        <div class="ranking-name">Juan González</div>
+                        <div class="ranking-location">
+                            <i class="fas fa-map-marker-alt"></i> San Francisco, Veraguas
+                        </div>
+                        <div class="ranking-category">Cliente frecuente</div>
+                        <div class="ranking-stats">
+                            <div class="ranking-stat"><i class="fas fa-star"></i> 4.6 (9 reseñas)</div>
+                            <div class="ranking-stat"><i class="fas fa-history"></i> Cliente desde: 2022</div>
+                            <div class="ranking-stat">
+                                <i class="fas fa-bell"></i> Solicitudes: 
+                                <span class="services-count">11</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ranking-score"><i class="fas fa-trophy"></i> 10°</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección de recompensas -->
+        <div class="coupons-section animate-on-load delay-2">
+            <div class="coupons-header">
+                <h2 class="coupons-title">Recompensas para clientes frecuentes</h2>
+            </div>
+            <p class="cou        <div class="coupons-grid">
+            <!-- Cupón para el primer puesto -->
+            <div class="coupon-card first">
+                <div class="coupon-position first">🥇 1er Lugar</div>
+                <div class="coupon-value">20% OFF</div>
+                <div class="coupon-code">CLIENTE20</div>
+                <div class="coupon-details">Descuento en tu próxima solicitud de servicio</div>
+                <button class="coupon-btn">Copiar Código</button>
+                <div class="coupon-expiry">Válido hasta: 30/06/2023</div>
+            </div>
+            
+            <!-- Cupón para el segundo puesto -->
+            <div class="coupon-card second">
+                <div class="coupon-position second">🥈 2do Lugar</div>
+                <div class="coupon-value">15% OFF</div>
+                <div class="coupon-code">CLIENTE15</div>
+                <div class="coupon-details">Descuento en tu próxima solicitud de servicio</div>
+                <button class="coupon-btn">Copiar Código</button>
+                <div class="coupon-expiry">Válido hasta: 30/06/2023</div>
+            </div>
+            
+            <!-- Cupón para el tercer puesto -->
+            <div class="coupon-card third">
+                <div class="coupon-position third">🥉 3er Lugar</div>
+                <div class="coupon-value">10% OFF</div>
+                <div class="coupon-code">CLIENTE10</div>
+                <div class="coupon-details">Descuento en tu próxima solicitud de servicio</div>
+                <button class="coupon-btn">Copiar Código</button>
+                <div class="coupon-expiry">Válido hasta: 30/06/2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de perfil -->
+<div class="modal" id="profileModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <div class="modal-header">
+            <img id="modalAvatar" src="" alt="Avatar" class="modal-avatar">
+            <h2 id="modalName" class="modal-name"></h2>
+            <div id="modalLocation" class="modal-location"></div>
+            <div id="modalCategory" class="modal-category"></div>
+        </div>
+        
+        <div class="modal-stats">
+            <div class="modal-stat">
+                <div id="modalRequests" class="modal-stat-value"></div>
+                <div class="modal-stat-label">Solicitudes</div>
+            </div>
+            <div class="modal-stat">
+                <div id="modalRating" class="modal-stat-value"></div>
+                <div class="modal-stat-label">Calificación</div>
+            </div>
+            <div class="modal-stat">
+                <div id="modalReviews" class="modal-stat-value"></div>
+                <div class="modal-stat-label">Reseñas</div>
+            </div>
+            <div class="modal-stat">
+                <div id="modalSince" class="modal-stat-value"></div>
+                <div class="modal-stat-label">Cliente desde</div>
+            </div>
+        </div>
+        
+        <div class="modal-actions">
+            <button class="modal-btn primary">Contactar</button>
+            <button class="modal-btn secondary" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="Cliente_ranking.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

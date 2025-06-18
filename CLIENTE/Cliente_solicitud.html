@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Solicitudes</title>
+    <link rel="stylesheet" href="Cliente_solicitud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item nav-active" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="page-title">Mis Solicitudes y Contratos</h1>
+            
+            <div style="text-align: right; margin-bottom: 20px;">
+                <button onclick="window.location.href='inicio.html'" 
+                        style="background-color: #2288ff; 
+                            color: white; 
+                            border: none; 
+                            padding: 12px 25px; 
+                            border-radius: 8px; 
+                            font-weight: 500; 
+                            cursor: pointer; 
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 12px rgba(34, 136, 255, 0.2);">
+                    <i class="fas fa-plus" style="margin-right: 8px;"></i>
+                    Crear nueva solicitud
+                </button>
+            </div> 
+        </div>
+        
+        <!-- Pestañas -->
+        <div class="tabs-container">
+            <button class="tab-btn active" id="requestsTab">Solicitudes</button>
+            <button class="tab-btn" id="contractsTab">Contratos</button>
+        </div>
+        <!-- Filtros -->
+        <div class="filters-container">
+            <h3 class="filter-title">Filtrar por:</h3>
+            <div class="filter-options">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Pendientes</button>
+                <button class="filter-btn">Aceptadas</button>
+                <button class="filter-btn">Rechazadas</button>
+                <button class="filter-btn">Este mes</button>
+            </div>
+        </div>
+        
+        <!-- Lista de solicitudes (visible por defecto) -->
+        <div class="requests-container" id="requestsSection">
+            <div class="requests-header">
+                <h3 class="requests-title">Mis solicitudes</h3>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar solicitudes...">
+                </div>
+            </div>
+            
+            <div class="requests-list">
+                <!-- Solicitud 1 - Pendiente -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Carlos Mendoza">
+                    </div>
+                    <div class="request-info">
+                        <h4>Carlos Mendoza <span class="request-status status-pending">Pendiente</span></h4>
+                        <p><i class="fas fa-tools"></i> Reparación de tubería principal</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> Hoy, 10:30 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 2 - Aceptada -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/QqY9ztX.jpg" alt="Laura Díaz">
+                    </div>
+                    <div class="request-info">
+                        <h4>Laura Díaz <span class="request-status status-accepted">Aceptada</span></h4>
+                        <p><i class="fas fa-tint"></i> Fuga de agua en cocina</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> Ayer, 8:15 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Solicitud 3 - Rechazada -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/LmU5P3x.jpg" alt="Roberto Vargas">
+                    </div>
+                    <div class="request-info">
+                        <h4>Roberto Vargas <span class="request-status status-rejected">Rechazada</span></h4>
+                        <p><i class="fas fa-bolt"></i> Instalación eléctrica nueva</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 12 Jun, 2:30 PM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lista de contratos (oculta por defecto) -->
+        <div class="requests-container" id="contractsSection" style="display: none;">
+            <div class="requests-header">
+                <h3 class="requests-title">Mis contratos</h3>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar contratos...">
+                </div>
+            </div>
+            
+            <div class="requests-list">
+                <!-- Contrato 1 - Completado -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Carlos Mendoza">
+                    </div>
+                    <div class="request-info">
+                        <h4>Carlos Mendoza <span class="request-status status-completed">Completado</span></h4>
+                        <p><i class="fas fa-tools"></i> Reparación de tubería principal</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 5 Jun, 10:30 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn review-btn" title="Enviar reseña">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Contrato 2 - En progreso -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/QqY9ztX.jpg" alt="Laura Díaz">
+                    </div>
+                    <div class="request-info">
+                        <h4>Laura Díaz <span class="request-status status-pending">En progreso</span></h4>
+                        <p><i class="fas fa-tint"></i> Fuga de agua en cocina</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 10 Jun, 8:15 AM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Contrato 3 - Cancelado -->
+                <div class="request-item">
+                    <div class="request-avatar">
+                        <img src="https://i.imgur.com/LmU5P3x.jpg" alt="Roberto Vargas">
+                    </div>
+                    <div class="request-info">
+                        <h4>Roberto Vargas <span class="request-status status-cancelled">Cancelado</span></h4>
+                        <p><i class="fas fa-bolt"></i> Instalación eléctrica nueva</p>
+                        <div class="request-time">
+                            <i class="far fa-clock"></i> 15 May, 2:30 PM
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="action-btn details-btn" title="Ver detalles">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Detalles de Solicitud -->
+    <div class="modal" id="requestDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Detalles de la Solicitud</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="provider-profile">
+                    <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Carlos Mendoza" class="provider-avatar">
+                    <div class="provider-info">
+                        <h4>Carlos Mendoza</h4>
+                        <p><i class="fas fa-phone-alt"></i> +52 55 9876 5432</p>
+                        <p><i class="fas fa-envelope"></i> carlos.mendoza@example.com</p>
+                        <div class="provider-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            (4.5)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-details">
+                    <h5>Detalles del Servicio</h5>
+                    <p>Reporté una fuga de agua en la tubería principal del baño. El agua está goteando constantemente y ya causó daños en el piso.</p>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Tipo de servicio:</div>
+                        <div class="detail-value">Plomería</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Urgencia:</div>
+                        <div class="detail-value">Media (pérdida de agua)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Fecha solicitada:</div>
+                        <div class="detail-value">Hoy, lo antes posible</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Dirección:</div>
+                        <div class="detail-value">Calle Roble 34, Col. Bosques, CP 12345</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Presupuesto estimado:</div>
+                        <div class="detail-value">$1,200 - $1,800 MXN</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary close-modal">Cerrar</button>
+                <button class="modal-btn modal-btn-primary">Contactar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Reseña -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Dejar Reseña</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="provider-profile">
+                    <img src="https://i.imgur.com/5Z2WvTJ.jpg" alt="Carlos Mendoza" class="provider-avatar">
+                    <div class="provider-info">
+                        <h4>Carlos Mendoza</h4>
+                        <p>Servicio: Reparación de tubería principal</p>
+                        <p>Fecha: 5 Junio 2023</p>
+                    </div>
+                </div>
+                
+                <div class="review-form">
+                    <div class="rating-input">
+                        <div class="rating-stars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <span id="rating-text">Califica este servicio</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-text">Tu reseña:</label>
+                        <textarea id="review-text" placeholder="Describe tu experiencia con este servicio..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary close-modal">Cancelar</button>
+                <button class="modal-btn modal-btn-primary">Enviar Reseña</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Cliente_solicitud.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

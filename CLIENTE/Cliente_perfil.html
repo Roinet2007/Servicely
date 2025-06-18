@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Perfil</title>
+    <link rel="stylesheet" href="Cliente_perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item nav-active" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <div class="profile-container">
+            <aside class="profile-sidebar">
+                <img src="C:\Users\Roinet P\Documents\YO.jpg" alt="Foto de perfil" class="profile-pic" id="profile-pic">
+                <input type="file" id="profile-upload" style="display: none;" accept="image/*">
+                <center><button class="edit-btn1" onclick="document.getElementById('profile-upload').click()">
+                    <i class="fas fa-camera"></i> Cambiar foto
+                </button></center>
+                
+                <h2 class="profile-name" id="profile-name">Roinet Pita</h2>
+                <p class="profile-role">Cliente desde: Junio 2022</p>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Servicios</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Calificación</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Favoritos</div>
+                    </div>
+                </div>
+                
+            </aside>
+            
+            <main class="profile-content">
+                <div class="personal-info">
+                    <h2 class="section-title">
+                        Información personal
+                        <button class="edit-btn" id="edit-personal-btn">
+                            <i class="fas fa-edit"></i> Editar
+                        </button>
+                    </h2>
+                    
+                    <div class="profile-info" id="personal-info-display">
+                        <div class="info-group">
+                            <div class="info-label">Nombre completo</div>
+                            <div class="info-value" id="display-name">Roinet Pita</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Correo electrónico</div>
+                            <div class="info-value" id="display-email">roinet.pita@example.com</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Teléfono</div>
+                            <div class="info-value" id="display-phone">+507 65423678</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Fecha de nacimiento</div>
+                            <div class="info-value" id="display-birthdate">17/11/2006</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Dirección</div>
+                            <div class="info-value" id="display-address">Santiago, Veraguas, Los algarrobos</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Cédula</div>
+                            <div class="info-value" id="display-dni">9-122-3241</div>
+                        </div>
+                    </div>
+                    
+                    <div class="edit-form" id="personal-info-edit">
+                        <div class="profile-info">
+                            <div class="form-group">
+                                <label for="edit-name">Nombre completo</label>
+                                <input type="text" id="edit-name" value="Roinet Pita">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-email">Correo electrónico</label>
+                                <input type="email" id="edit-email" value="roinet.pita@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-phone">Teléfono</label>
+                                <input type="tel" id="edit-phone" value="+507 65423678">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-birthdate">Fecha de nacimiento</label>
+                                <input type="date" id="edit-birthdate" value="2006-11-17">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-address">Dirección</label>
+                                <input type="text" id="edit-address" value="Santiago, Veraguas, Los algarrobos">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-dni">Cédula</label>
+                                <input type="text" id="edit-dni" value="9-122-3241">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="cancel-btn" id="cancel-personal-edit">Cancelar</button>
+                            <button class="save-btn" id="save-personal-edit">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preferences">
+                    <h2 class="section-title">
+                        Preferencias
+                        <button class="edit-btn" id="edit-prefs-btn">
+                            <i class="fas fa-edit"></i> Editar
+                        </button>
+                    </h2>
+                    
+                    <div class="profile-info" id="prefs-info-display">
+                        <div class="info-group">
+                            <div class="info-label">Idioma preferido</div>
+                            <div class="info-value" id="display-language">Español</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Notificaciones</div>
+                            <div class="info-value" id="display-notifications">Activadas</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">Tema</div>
+                            <div class="info-value" id="display-theme">Claro</div>
+                        </div>
+                    </div>
+                    
+                    <div class="edit-form" id="prefs-info-edit">
+                        <div class="profile-info">
+                            <div class="form-group">
+                                <label for="edit-language">Idioma preferido</label>
+                                <select id="edit-language">
+                                    <option value="es">Español</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="fr">Francés</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-notifications">Notificaciones</label>
+                                <select id="edit-notifications">
+                                    <option value="on">Activadas</option>
+                                    <option value="off">Desactivadas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-theme">Tema</label>
+                                <select id="edit-theme">
+                                    <option value="light">Claro</option>
+                                    <option value="dark">Oscuro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="cancel-btn" id="cancel-prefs-edit">Cancelar</button>
+                            <button class="save-btn" id="save-prefs-edit">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+    <script>
+        // Función para alternar entre vista y edición
+        function toggleEdit(section) {
+            const display = document.getElementById(`${section}-info-display`);
+            const edit = document.getElementById(`${section}-info-edit`);
+            
+            if (display.style.display === 'none') {
+                display.style.display = 'grid';
+                edit.style.display = 'none';
+            } else {
+                display.style.display = 'none';
+                edit.style.display = 'block';
+            }
+        }
+        
+        // Función para guardar cambios
+        function saveChanges(section) {
+            if (section === 'personal') {
+                // Actualizar los valores mostrados con los del formulario
+                document.getElementById('display-name').textContent = document.getElementById('edit-name').value;
+                document.getElementById('display-email').textContent = document.getElementById('edit-email').value;
+                document.getElementById('display-phone').textContent = document.getElementById('edit-phone').value;
+                
+                // Formatear fecha para mostrar
+                const birthdate = new Date(document.getElementById('edit-birthdate').value);
+                const formattedDate = birthdate.toLocaleDateString('es-ES');
+                document.getElementById('display-birthdate').textContent = formattedDate;
+                
+                document.getElementById('display-address').textContent = document.getElementById('edit-address').value;
+                document.getElementById('display-dni').textContent = document.getElementById('edit-dni').value;
+                
+                // Actualizar nombre en el sidebar
+                const fullName = document.getElementById('edit-name').value;
+                const firstName = fullName.split(' ')[0];
+                document.getElementById('profile-name').textContent = firstName;
+            } else if (section === 'prefs') {
+                document.getElementById('display-language').textContent = 
+                    document.getElementById('edit-language').options[document.getElementById('edit-language').selectedIndex].text;
+                document.getElementById('display-notifications').textContent = 
+                    document.getElementById('edit-notifications').options[document.getElementById('edit-notifications').selectedIndex].text;
+                document.getElementById('display-theme').textContent = 
+                    document.getElementById('edit-theme').options[document.getElementById('edit-theme').selectedIndex].text;
+            }
+            
+            toggleEdit(section);
+            
+            // Mostrar notificación de éxito
+            alert('Cambios guardados correctamente');
+        }
+        
+        // Event listeners para botones de edición
+        document.getElementById('edit-personal-btn').addEventListener('click', () => toggleEdit('personal'));
+        document.getElementById('edit-prefs-btn').addEventListener('click', () => toggleEdit('prefs'));
+        
+        // Event listeners para botones de cancelar
+        document.getElementById('cancel-personal-edit').addEventListener('click', () => toggleEdit('personal'));
+        document.getElementById('cancel-prefs-edit').addEventListener('click', () => toggleEdit('prefs'));
+        
+        // Event listeners para botones de guardar
+        document.getElementById('save-personal-edit').addEventListener('click', () => saveChanges('personal'));
+        document.getElementById('save-prefs-edit').addEventListener('click', () => saveChanges('prefs'));
+        
+        // Manejar cambio de foto de perfil
+        document.getElementById('profile-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    document.getElementById('profile-pic').src = event.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Cambiar tema según preferencias
+        document.getElementById('save-prefs-edit').addEventListener('click', function() {
+            const theme = document.getElementById('edit-theme').value;
+            if (theme === 'dark') {
+                document.documentElement.style.setProperty('--light-color', '#333');
+                document.documentElement.style.setProperty('--text-color', '#fff');
+                document.documentElement.style.setProperty('--secondary-color', '#005f92');
+            } else {
+                document.documentElement.style.setProperty('--light-color', '#fff');
+                document.documentElement.style.setProperty('--text-color', '#333');
+                document.documentElement.style.setProperty('--secondary-color', '#caf0f8');
+            }
+        });
+    </script>
+    </main>
+
+    <script src="Cliente_perfil.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

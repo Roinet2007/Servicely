@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Notificaciones</title>
+    <link rel="stylesheet" href="Cliente_notificaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item nav-active" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Notificaciones</h1>
+                <div class="action-buttons">
+                    <button class="btn btn-outline">
+                        <i class='bx bx-check-circle btn-icon'></i> Marcar todas como leídas
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class='bx bx-filter-alt btn-icon'></i> Filtrar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Notification Tabs -->
+            <div class="notification-tabs">
+                <button class="tab-btn active">Todas</button>
+                <button class="tab-btn">No leídas</button>
+                <button class="tab-btn">Solicitudes</button>
+                <button class="tab-btn">Mensajes</button>
+                <button class="tab-btn">Promociones</button>
+            </div>
+
+            <!-- Notifications List -->
+            <div class="notifications-container">
+                <!-- Rejected Request -->
+                <div class="notification-card unread">
+                    <div class="notification-icon rejection">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <div class="notification-content">
+                        <h3 class="notification-title">Solicitud rechazada</h3>
+                        <p class="notification-text">El profesional <strong>Juan Pérez</strong> ha rechazado tu solicitud de reparación eléctrica. Lamentamos esta situación.</p>
+                        <p class="notification-time">Hace 2 horas</p>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary">Ver detalles</button>
+                        <button class="btn btn-secondary">Buscar otro</button>
+                    </div>
+                </div>
+
+                <!-- Accepted Request -->
+                <div class="notification-card unread">
+                    <div class="notification-icon acceptance">
+                        <i class='bx bx-check'></i>
+                    </div>
+                    <div class="notification-content">
+                        <h3 class="notification-title">Solicitud aceptada</h3>
+                        <p class="notification-text"><strong>María Gómez</strong> ha aceptado tu solicitud de servicio de jardinería. Se pondrá en contacto contigo pronto.</p>
+                        <p class="notification-time">Ayer, 15:30</p>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary">Ver detalles</button>
+                        <button class="btn btn-secondary">Contactar</button>
+                    </div>
+                </div>
+
+
+                <!-- Promotion -->
+                <div class="notification-card">
+                    <div class="notification-icon promotion">
+                        <i class='bx bx-gift'></i>
+                    </div>
+                    <div class="notification-content">
+                        <h3 class="notification-title">Promoción especial</h3>
+                        <p class="notification-text">¡Descuento del 15% en servicios de fontanería este fin de semana! Válido hasta el domingo.</p>
+                        <p class="notification-time">5 jun 2023</p>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary">Ver oferta</button>
+                    </div>
+                </div>
+
+                <!-- Rating Request -->
+                <div class="notification-card">
+                    <div class="notification-icon rating">
+                        <i class='bx bx-star'></i>
+                    </div>
+                    <div class="notification-content">
+                        <h3 class="notification-title">Califica tu servicio</h3>
+                        <p class="notification-text">¿Cómo calificarías el servicio de <strong>Limpieza Express</strong> que recibiste el 2 de junio?</p>
+                        <p class="notification-time">3 jun 2023</p>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary">Calificar ahora</button>
+                        <button class="btn btn-secondary">Recordarme luego</button>
+                    </div>
+                </div>
+
+                <!-- System Update -->
+                <div class="notification-card">
+                    <div class="notification-icon system">
+                        <i class='bx bx-info-circle'></i>
+                    </div>
+                    <div class="notification-content">
+                        <h3 class="notification-title">Actualización del sistema</h3>
+                        <p class="notification-text">Hemos implementado nuevas funciones para mejorar tu experiencia. ¡Échales un vistazo!</p>
+                        <p class="notification-time">1 jun 2023</p>
+                    </div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary">Ver novedades</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mark as read functionality
+            const notifications = document.querySelectorAll('.notification-card');
+            notifications.forEach(notification => {
+                notification.addEventListener('click', function(e) {
+                    // Don't mark as read if clicking on buttons
+                    if (e.target.tagName === 'BUTTON') return;
+                    
+                    if (this.classList.contains('unread')) {
+                        this.classList.remove('unread');
+                        // Here you would add AJAX call to update status on server
+                    }
+                });
+            });
+
+            // Mark all as read
+            const markAllRead = () => {
+                document.querySelectorAll('.notification-card.unread').forEach(notification => {
+                    notification.classList.remove('unread');
+                    // Here you would add AJAX call to update all notifications
+                });
+            };
+
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Here you would add filtering logic
+                    // For demo purposes, we'll just show/hide the empty state
+                    if (this.textContent === 'No leídas') {
+                        // document.querySelector('.empty-state').style.display = 'block';
+                        // document.querySelector('.notifications-container').style.display = 'none';
+                    } else {
+                        // document.querySelector('.empty-state').style.display = 'none';
+                        // document.querySelector('.notifications-container').style.display = 'flex';
+                    }
+                });
+            });
+
+            // Simulate mark all as read button
+            document.querySelector('.action-buttons .btn-outline:first-child').addEventListener('click', markAllRead);
+        });
+    </script>
+    </main>
+
+    <script src="Cliente_notificaciones.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Inicio</title>
+    <link rel="stylesheet" href="cliente_inicio.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item nav-active" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="slideshow-container">
+                <div class="slideshow"></div>
+            </div>
+            <div class="container hero-content">
+                <h1>Todo para reparar tu hogar, de manera simple</h1>
+                <p class="subtitle">Describe tu proyecto o problema — sé tan detallado como quieras.</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Encuentra el servicio que necesites...">
+                    <button class="search-btn" onclick="buscarServicio()">Buscar</button>
+                </div>
+                <div class="trust-badge">
+                    <p>Personas reales confían en Servicely cada día</p>
+                    <div class="app-badges">
+                    <p> Nuestra plataforma conecta a clientes con proveedores de servicios comprometidos y de calidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Populares -->
+        <section class="popular-services">
+            <div class="container">
+                <div class="app-promo">
+                    <h3>La única plataforma que necesitas para encontrar y ofrecer servicios</h3>
+                    <p>Desde la búsqueda de profesionales confiables hasta la gestión de solicitudes, todo lo haces fácil con Servicely — en un solo lugar, sin complicaciones.</p>
+                    <a href="Cliente_todos.html" class="cta-button">Ver todo mantenimiento del hogar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explorar Proyectos -->
+        <section class="explore-projects">
+            <div class="container">
+                <h2>Explora algunas categorías</h2>
+                <div class="categories">
+                    <a href="servicios/mecanica.html" class="category-card mecanica">
+                        <div class="card-content">
+                            <h3>Mecánica Automotriz</h3>
+                            <p class="card-description">Reparación y mantenimiento profesional de vehículos</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                    <a href="servicios/carpinteria.html" class="category-card carpinteria">
+                        <div class="card-content">
+                            <h3>Carpintería y Ebanistería</h3>
+                            <p class="card-description">Trabajos en madera y muebles personalizados</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                    <a href="servicios/fontaneria.html" class="category-card fontaneria">
+                        <div class="card-content">
+                            <h3>Fontanería y Plomería</h3>
+                            <p class="card-description">Soluciones para tuberías y sistemas de agua</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                    <a href="servicios/electricidad.html" class="category-card electricidad">
+                        <div class="card-content">
+                            <h3>Electricidad y electrónica</h3>
+                            <p class="card-description">Instalaciones y reparaciones eléctricas seguras</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                    <a href="servicios/jardineria.html" class="category-card jardineria">
+                        <div class="card-content">
+                            <h3>Jardinería y Paisajismo</h3>
+                            <p class="card-description">Diseño y mantenimiento de áreas verdes</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                    <a href="servicios/limpieza.html" class="category-card limpieza">
+                        <div class="card-content">
+                            <h3>Limpieza Profesional</h3>
+                            <p class="card-description">Servicios de limpieza residencial y comercial</p>
+                            <span class="card-link">Ver especialistas →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Centro de Recursos -->
+
+    </main>
+
+    <script src="Cliente_inicio.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

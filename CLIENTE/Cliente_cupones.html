@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Cupones</title>
+    <link rel="stylesheet" href="Cliente_cupones.css">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item nav-active" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Encabezado -->
+        <div class="header">
+            <div>
+                <h1 class="page-title animate-on-load">Mis Cupones</h1>
+                <span class="coupons-count animate-on-load">
+                    <i class="fas fa-tag"></i> 5 cupones disponibles
+                </span>
+            </div>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container animate-on-load">
+            <div class="status-filter">
+                <span class="filter-label">Estado:</span>
+                <select class="filter-select">
+                    <option selected>Todos</option>
+                    <option>Activos</option>
+                    <option>Próximos a expirar</option>
+                    <option>Expirados</option>
+                    <option>Especiales</option>
+                </select>
+            </div>
+            
+            <div class="search-filter">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Buscar cupones...">
+            </div>
+        </div>
+        
+        <!-- Contenedor de cupones activos -->
+        <div class="coupons-container animate-on-load delay-1">
+            <div class="coupons-header">
+                <div>
+                    <h2 class="coupons-title">Cupones Activos</h2>
+                    <p class="coupons-subtitle">Puedes usar estos cupones en tu próxima solicitud de servicio</p>
+                </div>
+                <i class="fas fa-tags" style="font-size: 2rem; color: var(--success);"></i>
+            </div>
+            
+            <div class="coupons-grid">
+                <!-- Cupón 1 - Activo -->
+                <div class="coupon-card active">
+                    <span class="coupon-badge active">Activo</span>
+                    <div class="coupon-value">20% OFF</div>
+                    <h3 class="coupon-title">Descuento en Servicios</h3>
+                    <div class="coupon-code">
+                        <span>CLIENTE20</span>
+                        <i class="far fa-copy copy-icon" data-code="CLIENTE20"></i>
+                    </div>
+                    <p class="coupon-details">Aplica para cualquier servicio con un valor mínimo de $20. No acumulable con otras promociones.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 15/07/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 1 uso restante</span>
+                    </div>
+                    <button class="coupon-btn" onclick="showConfirmation('CLIENTE20')">
+                        <i class="fas fa-shopping-cart"></i> Usar Ahora
+                    </button>
+                </div>
+                
+                <!-- Cupón 2 - Próximo a expirar -->
+                <div class="coupon-card warning">
+                    <span class="coupon-badge warning">Próximo a expirar</span>
+                    <div class="coupon-value">15% OFF</div>
+                    <h3 class="coupon-title">Servicio de Electricidad</h3>
+                    <div class="coupon-code">
+                        <span>ELECT15</span>
+                        <i class="far fa-copy copy-icon" data-code="ELECT15"></i>
+                    </div>
+                    <p class="coupon-details">Descuento exclusivo para servicios de electricidad residencial. Aplica para servicios mayores a $30.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 05/07/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 1 uso restante</span>
+                    </div>
+                    <button class="coupon-btn" onclick="showConfirmation('ELECT15')">
+                        <i class="fas fa-shopping-cart"></i> Usar Ahora
+                    </button>
+                </div>
+                
+                <!-- Cupón 3 - Especial -->
+                <div class="coupon-card special">
+                    <span class="coupon-badge special">Especial</span>
+                    <div class="coupon-value">$10 OFF</div>
+                    <h3 class="coupon-title">Primer Servicio</h3>
+                    <div class="coupon-code">
+                        <span>BIENVEN10</span>
+                        <i class="far fa-copy copy-icon" data-code="BIENVEN10"></i>
+                    </div>
+                    <p class="coupon-details">Descuento fijo para tu primer servicio con un profesional nuevo. No requiere mínimo de compra.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Vence: 31/08/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 1 uso restante</span>
+                    </div>
+                    <div class="coupon-actions">
+                        <button class="coupon-btn" onclick="showConfirmation('BIENVEN10')">
+                            <i class="fas fa-shopping-cart"></i> Usar
+                        </button>
+                        <button class="coupon-btn secondary">
+                            <i class="fas fa-share-alt"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección de cupones expirados -->
+        <div class="expired-section animate-on-load delay-2">
+            <div class="expired-header">
+                <h2 class="expired-title">Cupones Expirados</h2>
+                <i class="fas fa-history" style="font-size: 2rem; color: var(--danger);"></i>
+            </div>
+            <p class="expired-description">Estos cupones ya no están disponibles para su uso</p>
+            
+            <div class="coupons-grid">
+                <!-- Cupón 4 - Expirado -->
+                <div class="coupon-card expired">
+                    <span class="coupon-badge expired">Expirado</span>
+                    <div class="coupon-value">25% OFF</div>
+                    <h3 class="coupon-title">Aniversario Servicely</h3>
+                    <div class="coupon-code">
+                        <span>ANIV25</span>
+                        <i class="far fa-copy copy-icon" data-code="ANIV25"></i>
+                    </div>
+                    <p class="coupon-details">Promoción especial por nuestro aniversario. Válido para cualquier servicio durante junio 2023.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Venció: 30/06/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 0 usos restantes</span>
+                    </div>
+                    <button class="coupon-btn expired" disabled>
+                        <i class="fas fa-ban"></i> Expirado
+                    </button>
+                </div>
+                
+                <!-- Cupón 5 - Expirado -->
+                <div class="coupon-card expired">
+                    <span class="coupon-badge expired">Expirado</span>
+                    <div class="coupon-value">30% OFF</div>
+                    <h3 class="coupon-title">Servicio de Plomería</h3>
+                    <div class="coupon-code">
+                        <span>PLOM30</span>
+                        <i class="far fa-copy copy-icon" data-code="PLOM30"></i>
+                    </div>
+                    <p class="coupon-details">Descuento especial en servicios de plomería para clientes frecuentes. Mínimo $50 de compra.</p>
+                    <div class="coupon-meta">
+                        <span class="coupon-date"><i class="far fa-calendar-alt"></i> Venció: 15/05/2023</span>
+                        <span class="coupon-uses"><i class="far fa-clock"></i> 0 usos restantes</span>
+                    </div>
+                    <button class="coupon-btn expired" disabled>
+                        <i class="fas fa-ban"></i> Expirado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="modal-title">¡Cupón listo para usar!</h2>
+                <p class="modal-message">Este código de cupón ha sido copiado a tu portapapeles. Preséntalo al solicitar tu servicio.</p>
+                <div class="modal-code" id="modalCouponCode"></div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn primary" onclick="redirectToServices()">
+                    <i class="fas fa-tools"></i> Buscar Servicios
+                </button>
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Cliente_cupones.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>

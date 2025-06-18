@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely - Resultados</title>
+    <link rel="stylesheet" href="Cliente_resultados.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="running.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <i class="bx bx-run"></i>
+      </div>
+
+      <nav class="menu">
+        <h1 class="menu-header">Servicely</h1>
+
+        <a href="cliente_inicio.html" class="menu-item nav-active" data-tooltip="Inicio">
+        <i class="bx bx-home-smile"></i>
+        <span>Inicio</span>
+        </a>
+
+        <a href="Cliente_solicitud.html" class="menu-item" data-tooltip="Solicitudes">
+        <i class="bx bx-envelope"></i>
+        <span>Solicitudes</span>
+        </a>
+
+        <a href="Cliente_notificaciones.html" class="menu-item" data-tooltip="Notificaciones">
+        <i class="bx bx-bell"></i>
+        <span>Notificaciones</span>
+        </a>
+
+        <a href="Cliente_ranking.html" class="menu-item" data-tooltip="Ranking">
+        <i class="bx bx-trophy"></i>
+        <span>Ranking</span>
+        </a>
+
+        <a href="Cliente_cupones.html" class="menu-item" data-tooltip="Cupones">
+        <i class="bx bx-purchase-tag"></i>
+        <span>Cupones</span>
+        </a>
+
+        <a href="Cliente_perfil.html" class="menu-item" data-tooltip="Perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+        </a>
+
+
+      </nav>
+
+      <div class="logout" data-tooltip="Cerrar sesión">
+        <i class="bx bx-log-out"></i>
+        <span>Cerrar sesión</span>
+      </div>
+
+      <div class="toggle-menu" id="toggle-button">
+        <i class="bx bxs-right-arrow"></i>
+        <i class="bx bxs-left-arrow"></i>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Encabezado -->
+        <div class="header">
+            <div>
+                <h1 class="page-title animate-on-load">Todos los servicios en un solo lugar</h1>
+                <span class="providers-count animate-on-load">
+                    <i class="fas fa-users"></i> 24 proveedores disponibles
+                </span>
+            </div>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters-container animate-on-load">
+            <div class="search-filter">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Buscar proveedores...">
+            </div>
+        </div>
+        
+        <!-- Contenedor de proveedores -->
+        <div class="providers-container animate-on-load delay-1">
+            <div class="providers-header">
+                <div>
+                    <h2 class="providers-title">Resultados para "Limpieza del hogar"</h2>
+                    <p class="providers-subtitle">Encuentra el profesional perfecto para tu necesidad</p>
+                </div>
+                <i class="fas fa-hands-helping" style="font-size: 2rem; color: var(--primary-color);"></i>
+            </div>
+            
+            <div class="providers-grid">
+                <!-- Proveedor 1 -->
+                <div class="provider-card">
+                    <span class="provider-badge">Disponible</span>
+                    <div class="provider-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="count">(42)</span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Proveedor" class="provider-image">
+                    <h3 class="provider-name">Carlos Mendoza</h3>
+                    <p class="provider-category">Plomería</p>
+                    <div class="provider-location">
+                        <i class="fas fa-map-marker-alt"></i> San Miguel, Lima
+                    </div>
+                    <div class="provider-skills">
+                        <span class="skill-tag">Fugas de agua</span>
+                        <span class="skill-tag">Instalaciones</span>
+                        <span class="skill-tag">Destapado</span>
+                    </div>
+                    <p class="provider-price">S/ 80 <span>por hora</span></p>
+                    <div class="provider-actions">
+                        <button class="provider-btn" onclick="showProviderDetails('Carlos Mendoza', 'Plomería')">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="provider-btn secondary" onclick="requestService('Carlos Mendoza')">
+                            <i class="fas fa-calendar-check"></i> Solicitar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Proveedor 2 -->
+                <div class="provider-card">
+                    <span class="provider-badge">Disponible</span>
+                    <div class="provider-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="count">(68)</span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Proveedor" class="provider-image">
+                    <h3 class="provider-name">María López</h3>
+                    <p class="provider-category">Limpieza</p>
+                    <div class="provider-location">
+                        <i class="fas fa-map-marker-alt"></i> Miraflores, Lima
+                    </div>
+                    <div class="provider-skills">
+                        <span class="skill-tag">Limpieza profunda</span>
+                        <span class="skill-tag">Organización</span>
+                        <span class="skill-tag">Lavandería</span>
+                    </div>
+                    <p class="provider-price">S/ 60 <span>por hora</span></p>
+                    <div class="provider-actions">
+                        <button class="provider-btn" onclick="showProviderDetails('María López', 'Limpieza')">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="provider-btn secondary" onclick="requestService('María López')">
+                            <i class="fas fa-calendar-check"></i> Solicitar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Proveedor 3 -->
+                <div class="provider-card">
+                    <span class="provider-badge">Disponible</span>
+                    <div class="provider-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span class="count">(35)</span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Proveedor" class="provider-image">
+                    <h3 class="provider-name">Jorge Gutiérrez</h3>
+                    <p class="provider-category">Electricidad</p>
+                    <div class="provider-location">
+                        <i class="fas fa-map-marker-alt"></i> Surco, Lima
+                    </div>
+                    <div class="provider-skills">
+                        <span class="skill-tag">Instalaciones</span>
+                        <span class="skill-tag">Reparaciones</span>
+                        <span class="skill-tag">Mantenimiento</span>
+                    </div>
+                    <p class="provider-price">S/ 120 <span>por visita</span></p>
+                    <div class="provider-actions">
+                        <button class="provider-btn" onclick="showProviderDetails('Jorge Gutiérrez', 'Electricidad')">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </button>
+                        <button class="provider-btn secondary" onclick="requestService('Jorge Gutiérrez')">
+                            <i class="fas fa-calendar-check"></i> Solicitar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de detalles del proveedor -->
+    <div class="modal" id="providerModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Proveedor" class="modal-provider-image" id="modalProviderImage">
+                <div class="modal-provider-info">
+                    <h2 id="modalProviderName">Carlos Mendoza</h2>
+                    <p class="modal-provider-category" id="modalProviderCategory">Plomería</p>
+                    <div class="modal-provider-location">
+                        <i class="fas fa-map-marker-alt"></i> <span id="modalProviderLocation">San Miguel, Lima</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-section">
+                <h3 class="modal-section-title">Sobre mí</h3>
+                <p class="modal-section-content" id="modalProviderAbout">
+                    Profesional con más de 10 años de experiencia en servicios de plomería residencial y comercial. 
+                    Especializado en detección y reparación de fugas, instalación de tuberías y mantenimiento preventivo. 
+                    Trabajo con herramientas profesionales y materiales de primera calidad.
+                </p>
+            </div>
+            
+            <div class="modal-section">
+                <h3 class="modal-section-title">Servicios ofrecidos</h3>
+                <div class="modal-services" id="modalProviderServices">
+                    <div class="service-item">
+                        <div class="service-name">Reparación de fugas</div>
+                        <div class="service-price">Desde S/ 80</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Destapado de cañerías</div>
+                        <div class="service-price">Desde S/ 100</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Instalación de tuberías</div>
+                        <div class="service-price">Desde S/ 150</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Mantenimiento preventivo</div>
+                        <div class="service-price">Desde S/ 120</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-section">
+                <h3 class="modal-section-title">Experiencia</h3>
+                <p class="modal-section-content">
+                    <strong>10+ años</strong> de experiencia en el rubro<br>
+                    <strong>500+</strong> clientes satisfechos<br>
+                    Certificado en instalaciones sanitarias por SENCICO
+                </p>
+            </div>
+            
+            <div class="modal-section">
+                <h3 class="modal-section-title">Reseñas recientes</h3>
+                <div class="modal-reviews">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-author">Juan Pérez</span>
+                            <span class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <p class="review-content">
+                            Excelente servicio, llegó puntual y resolvió el problema de la fuga en menos de una hora. Muy profesional y limpio en su trabajo.
+                        </p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-author">María Gómez</span>
+                            <span class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                        <p class="review-content">
+                            Buen trabajo en general, aunque el precio fue un poco más alto de lo esperado. Pero la calidad del servicio justificó la diferencia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn primary" onclick="requestServiceModal()">
+                    <i class="fas fa-calendar-check"></i> Solicitar Servicio
+                </button>
+                <button class="modal-btn secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de solicitud de servicio -->
+    <div class="modal" id="requestModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeRequestModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-calendar-check" style="color: var(--primary-color);"></i>
+                </div>
+                <h2 class="modal-title">Solicitar Servicio</h2>
+                <p class="modal-message" id="requestModalMessage">Complete el formulario para solicitar el servicio</p>
+            </div>
+            
+            <div class="modal-section">
+                <form id="serviceRequestForm">
+                    <div class="form-group">
+                        <label class="form-label">Proveedor</label>
+                        <input type="text" id="requestProvider" class="form-control" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Tipo de servicio</label>
+                        <select class="form-control" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option>Reparación de fugas</option>
+                            <option>Destapado de cañerías</option>
+                            <option>Instalación de tuberías</option>
+                            <option>Mantenimiento preventivo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Hora</label>
+                        <select class="form-control" required>
+                            <option value="">Seleccione una hora</option>
+                            <option>08:00 AM</option>
+                            <option>09:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>01:00 PM</option>
+                            <option>02:00 PM</option>
+                            <option>03:00 PM</option>
+                            <option>04:00 PM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Descripción del problema</label>
+                        <textarea class="form-control" required placeholder="Describa en detalle el problema que necesita resolver"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Presupuesto estimado (opcional)</label>
+                        <input type="number" class="form-control" placeholder="Ingrese su presupuesto estimado en S/">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Ubicación</label>
+                        <div id="map"></div>
+                        <small class="text-muted">Arrastre el marcador para ajustar su ubicación exacta</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Dirección completa</label>
+                        <textarea class="form-control" required placeholder="Ingrese su dirección completa"></textarea>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="submit" class="modal-btn primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                        </button>
+                        <button type="button" class="modal-btn secondary" onclick="closeRequestModal()">
+                            <i class="fas fa-times"></i> Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluir Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+<script src="Cliente_resultados.js"></script>  
+<script src="Cliente_resultado.js"></script>
+<script src="slideshow.js"></script>
+</body>
+</html>
