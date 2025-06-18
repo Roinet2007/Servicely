@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely | Sign Up</title>
+    <!-- LInk To CSS -->
+    <link rel="stylesheet" href="css/login-sign_up.style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="../inicio/inicio.html" class="logo"><i class='bx bx-run bx-tada' style='color:#3492fd' ></i>Servicely</a>
+           
+            <!-- Log In Button -->
+            <a href="../inicio/inicio.html" class="btn"> Volver </a>
+        </div>
+
+    </header>
+    <!-- Sign Up -->
+    <div class="login container">
+        <div class="login-container">
+            <h2>Bienvenido , vamos a iniciar</h2>
+            <p>Listo para crear tu cuenta, ¡empezemos!</p>
+            <!-- Login Form -->
+            <form action="">
+                <span>Nombre completo</span>
+                <input type="text" name="" id="" placeholder="Escribe tu nombre" required>
+                <span>Tipo de registro</span>
+                <div class="tipo-registro">
+                    <button id="btnCliente">Cliente</button>
+                    <button id="btnProveedor">Proveedor</button>
+                </div>
+                <!-- Pregunta cédula para Cliente -->
+                <div id="cedulaClienteContainer" style="display: none;">
+                    <span>Cédula</span>
+                    <input type="text" name="cedulaCliente" placeholder="Escribe tu cédula">
+                </div>
+
+                <!-- Pregunta tipo de proveedor -->
+                <span>Tipo de proveedor</span>
+                <div id="tipoProveedorContainer" class="tipo-registro" style="display: none;">
+                    <button id="btnIndependiente">Independiente</button>
+                    <button id="btnEmpresa">Empresa</button>
+                </div>
+
+                <!-- Pregunta cédula para Independiente -->
+                <div id="cedulaProveedorContainer" style="display: none;">
+                    <span>Cédula</span>
+                    <input type="text" name="cedulaProveedor" placeholder="Escribe tu cédula">
+                </div>
+
+                <!-- Pregunta RUC para Empresa -->
+                <div id="rucEmpresaContainer" style="display: none;">
+                    <span>RUC</span>
+                    <input type="text" name="rucEmpresa" placeholder="Número de RUC">
+                </div>
+                <input type="hidden" name="respuesta" id="respuesta">
+                <span>Ingresa tu dirección email </span>
+                <input type="email" name="" id="" placeholder="yomail@gmail.com" required>
+                <span>Teléfono</span>
+                <input type="tel" name="" id="" placeholder="6565-6565" required>
+                <span>Ingresa tu contraseña </span>
+                <input type="password" name="" id="" placeholder="Escribe la contraseña" required>
+                <input type="submit" value="Registrarme" class="buttom">
+                <center><a>Si ya tienes una cuenta... </a></center>
+            </form>
+            <a href="login.html" class="btn">Inicia sesión</a>
+        </div>
+        <!-- Log In Image -->
+        <div class="login-image">
+            <img src="images/registro.webp" alt="">
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Servicely</h2>
+            <div class="footer-box">
+                <h3>Páginas</h3>
+                <a href="../acerca_de/acerca_de.html">Acerca de</a>
+                <a href="../como_funciona/como_funciona.html">¿Cómo funciona?</a>
+                <a href="../contacto/contacto.html">Contacto</a>
+            </div>
+            <div class="footer-box">
+                <h3>Extras</h3>
+                <a href="#">App 2026</a>
+                <a href="../contacto/contacto.html#formulario">Formulario de dudas</a>
+                <a href="../acerca_de/acerca_de.html#new">Equipo Servicely</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <a href="tel:+50767600681">+507 67600681</a>
+                <a href="mailto:servicelyplatform@outlook.com">servicelyplatform@outlook.com</a>
+                <div class="social">
+                    <a href="https://www.facebook.com/share/1Ajgz7Mrfu/?mibextid=wwXIfr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/servicely173596?s=11"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.instagram.com/servicelypty?igsh=bXRyc3l5YTloeW80" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Servicely Todos los Derechos Reservados </p>
+    </div>
+    
+    <script src="js/dinamic_form.js"></script>
+    <script src="js/setTipoDesdeURL.js"></script>
+</body>
+</html>

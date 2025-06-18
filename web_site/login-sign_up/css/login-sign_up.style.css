@@ -1,0 +1,632 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+  list-style: none;
+  text-decoration: none;
+}
+/* Variables */
+:root {
+  --main-color: #2288ff;
+  --second-color: #192f6a;
+  --text-color: #314862;
+  --bg-color: #fff;
+
+  /* Box Shadow */
+  --box-shadow: 2px 2px 18px rgb(14 52 54 / 15%);
+}
+img {
+  width: 100%;
+}
+body {
+  color: var(--text-color);
+}
+section {
+  padding: 4.5rem 0 3rem;
+}
+.container {
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  display: block;
+  width: 100%;
+  background: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+.logo .bx {
+  font-size: 24px;
+  color: var(--main-color);
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  padding: 8px 17px;
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: var(--main-color);
+}
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+#menu {
+  display: none;
+}
+.btn {
+  padding: 8px 22px;
+  background: var(--main-color);
+  color: var(--bg-color);
+  border-radius: 5rem;
+}
+.btn:hover {
+  background: #3492fd;
+}
+/* Home */
+.home {
+  margin-top: 5rem;
+  background: url(../images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 440px;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.home-text {
+  padding-left: 35px;
+}
+.home-text h1 {
+  color: var(--bg-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Borde negro */
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+  gap: 2rem;
+}
+.about-img img {
+  border-radius: 3rem 0 3rem 3rem;
+}
+.about-text span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.about-text h2 {
+  font-size: 1.7rem;
+}
+.about-text p {
+  font-size: 0.938rem;
+  margin: 1rem 0 1rem;
+}
+.sales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 2.4rem;
+}
+.sales .box {
+  padding: 20px;
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  border-radius: 2rem;
+}
+.sales .box:hover
+ {
+  background: var(--main-color);
+  color: var(--bg-color);
+  transition: 0.4s all linear;
+}
+.sales .box .bx {
+  padding: 10px;
+  border-radius: 50%;
+  background: #f6f6fe;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.sales .box h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.4rem;
+}
+.sales .box p {
+  font-size: 00.938rem;
+}
+/* Properties */
+.tipo-registro {
+  display: flex;
+  gap: 0; /* sin espacio entre botones */
+  border: 1px solid var(--border-color); /* borde general del contenedor */
+  overflow: hidden;
+  width: auto;
+  background: rgb(228, 228, 228);
+  margin-bottom: 0%;
+  margin-bottom: 5%;
+}
+
+.tipo-registro button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  background: rgb(228, 228, 228);
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  border-right: 1px solid var(--border-color); /* línea divisora entre botones */
+  transition: all 0.3s ease;
+}
+
+/* El último botón no necesita borde derecho */
+.tipo-registro button:last-child {
+  border-right: none;
+}
+
+/* Botón seleccionado */
+.tipo-registro button.active {
+  background: var(--main-color);
+  color: white;
+  border-right: 1px solid var(--border-color) black; /* mantiene separación visual */
+  border-bottom: 1px solid black;
+  z-index: 1;
+}
+
+/* El botón activo sobrescribe borde exterior con negro */
+.tipo-registro button.active:first-child {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.tipo-registro button.active:last-child {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.heading span {
+  font-weight: 500;
+  color: var(--main-color);
+  font-size: 1.38rem;
+}
+.heading h2 {
+  font-size: 1.7rem;
+}
+.heading p {
+  font-size: 0.938rem;
+}
+.properties {
+  background: #fbfbfb;
+  border-radius: 2rem;
+}
+.properties-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 3rem;
+  padding: 0 50px;
+}
+.properties-container .box {
+  background: var(--bg-color);
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.properties-container .box:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80.5px, 95.1px));
+  justify-content: center;
+  gap: 7rem;
+}
+
+.ser-box p {
+  color: var(--container-color);
+  text-align: center;
+}
+.properties-container .box img {
+  border-radius: 1rem;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+.properties-container .box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  float: right;
+}
+.properties-container .box .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.properties-container .box .content .text h3 {
+  font-weight: 500;
+}
+.properties-container .box .content .text p {
+  font-size: 0.8rem;
+}
+.properties-container .box .content .icon {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.properties-container .box .content .icon .bx {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.properties-container .box .content .icon span {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 4px;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: 1.7rem;
+}
+.newsletter form input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.newsletter #email-box {
+  width: 280px;
+}
+.newsletter .btn {
+  padding: 12px 34px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* ---FOOTER---*/
+.footer {
+  background: var(--main-color);
+  color: var(--bg-color);
+  border-radius: 5rem 0 0 0;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 2rem;
+}
+.footer-container h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer-box a {
+  font-size: 0.8rem;
+  color: var(--bg-color);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.footer-box a:hover {
+  color: var(--text-color);
+}
+.social a {
+  font-size: 20px;
+  margin-right: 1rem;
+}
+.social a:hover {
+  color: var(--second-color);
+}
+.copyright {
+  padding: 20px;
+  text-align: center;
+  color: var(--bg-color);
+  background: var(--main-color);
+}
+/* Nav bar despegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  list-style: none;
+  padding: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Log IN */
+.login {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 2rem;
+}
+.login-image {
+  display: flex;
+  justify-content: right;
+  background-position: center right;
+  margin-left: 5%;
+  width: auto;
+  max-height: 80%;
+}
+.login-image img {
+  border-radius: 1rem;
+  max-width: auto;
+  height: auto;
+}
+.login-image-log {
+  display: flex;
+  justify-content: right;
+  background-position: center right;
+  margin-left: 5%;
+  width: auto;
+  max-height: 80%;
+}
+.login-image-log img {
+  border-radius: 1rem;
+  max-width: 80%;
+  height: auto;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width:auto;
+  min-width: 300px;
+  row-gap: 1rem;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-right: 5%;
+}
+@media (max-width: 768px) {
+  .login-container {
+    margin-right: 0;
+    min-width: none;
+  }
+}
+.login-container h2 {
+  font-size: 1.4rem;
+}
+.login-container p {
+  font-size: 0.9rem;
+}
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+.login-container form span {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  margin-bottom: 4px;
+}
+.login-container form input{
+  border: 1px solid #8a8a8a;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background: var(--bg-color);
+}
+
+.login-container form .buttom {
+  outline: none;
+  border: none;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 5rem;
+}
+.login-container form .buttom:hover {
+  background: #3492fd;
+}
+.login-container form a {
+  font-size: 0.9rem;
+  text-align: right;
+}
+.login-container .btn {
+  border-radius: 5rem;
+  text-align: center;
+}
+/*customer seccion*/
+.customers {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.customers h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.customers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.customers-container .box {
+  padding: 20px;
+  box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+  border-radius: 0.5rem;
+  border-bottom: 7px solid var(--green-color);
+}
+.customers-container .box:hover {
+  transform: translateY(10px);
+  transition: 0.2s all linear;
+}
+.customers-container .box .bx {
+  font-size: 24px;
+  color: var(--green-color);
+}
+.customers-container .box .stars .bx {
+  font-size: 1rem;
+  color: var(--light-orange-color);
+}
+.customers-container .box p {
+  font-size: 0.938rem;
+}
+
+/* Making Responsive */
+@media (max-width: 1080px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 880px) {
+  section {
+    padding: 4rem 0 3rem;
+  }
+  .properties-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1rem;
+    padding: 0 10px;
+  }
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1rem;
+  }
+  .login {
+    grid-template-columns: 0.6fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px 0;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--second-color);
+    text-align: center;
+    clip-path: circle(0% at 100% 1%);
+    transition: 0.6s;
+  }
+  .navbar a {
+    display: block;
+    margin: 1rem;
+    padding: 20px;
+    color: var(--bg-color);
+  }
+  .navbar a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s;
+  }
+  #menu:checked ~ .navbar {
+    clip-path: circle(144% at 100% 1%);
+  }
+  .about-text span {
+    font-size: 0.9rem;
+  }
+  .about-text h2,
+  .heading h2,
+  .newsletter h2 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 638px) {
+  .about-text {
+    text-align: center;
+  }
+  .about-img {
+    order: 2;
+  }
+  .login {
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .login {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 572px) {
+  .login-image {
+    display: none;
+  }
+  .login {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 442px) {
+  .home-text {
+    padding-left: 14px;
+  }
+  .home-text h1 {
+    font-size: 1.7rem;
+  }
+  .about-text h2,
+  .heading h2,
+  .newsletter h2 {
+    font-size: 1.2rem;
+  }
+  .properties-container {
+    padding: 0;
+  }
+  .newsletter #email-box {
+    width: 140px;
+  }
+  .footer {
+    border-radius: 3rem 0 0 0;
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely | Contacto</title>
+    <link rel="stylesheet" href="css/contacto.style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="../inicio/inicio.html" class="logo"><i class='bx bx-run bx-tada' style='color:#3492fd' ></i>Servicely</a>
+            <!-- Menu Icon -->
+            <input type="checkbox" name="" id="menu">
+            <label for="menu" <i class='bx bx-menu' id="menu-icon"></i></label>
+            <!-- Nav List -->
+            <ul class="navbar">
+                <li><a href="../inicio/inicio.html">Inicio</a></li>
+                <li><a href="../acerca_de/acerca_de.html">Acerca de</a></li>
+                <li><a href="../como_funciona/como_funciona.html">¿Cómo funciona?</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <!-- Log In Button -->
+            <a href="../login-sign_up/login.html" class="btn">Entrar</a>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section class="home container" id="home">
+        <div class="background-layer"></div>
+        <div class="home-text">
+            <h1>¿Preguntas? <br>¿Ideas?<br>¡No te quedes con ellas, escríbenos!</h1>
+        </div>
+    </section>
+
+    <div class="questions-contact container">
+        <!-- Preguntas Frecuentes -->
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <p class="questions__paragraph">
+                Revisa nuestras preguntas frecuentes para encontrar respuestas a las consultas más comunes.
+            </p>
+            <section class="questions__container">
+                <!-- Pregunta 1 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Cuál es el objetivo de Servicely?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Servicely busca conectar personas que necesitan servicios con proveedores confiables, de forma rápida y segura.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Pregunta 2 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Cómo ayuda Servicely a otras personas?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Facilita la búsqueda de proveedores capacitados y ayuda a quienes ofrecen servicios a promocionarse sin complicaciones.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Pregunta 3 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Qué es Servicely?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Es una plataforma digital donde usuarios pueden encontrar y contactar proveedores de servicios técnicos y domésticos.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Pregunta 4 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Cómo me registro como proveedor?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Solo debes crear una cuenta, completar tu perfil con tus datos, experiencia y servicios ofrecidos. Luego podrás ser visible en la plataforma.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Pregunta 5 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Puedo confiar en los proveedores de Servicely?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Cada proveedor tiene un perfil con información, experiencia y reseñas de otros usuarios para ayudarte a tomar una mejor decisión.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Pregunta 6 -->
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">
+                            ¿Servicely cobra por usar la plataforma?
+                            <span class="questions__arrow">
+                                <img src="images/arrow.svg" class="questions__img" alt="Flecha">
+                            </span>
+                        </h3>
+                        <p class="questions__show">
+                            Por ahora, el uso de Servicely es gratuito tanto para proveedores como para usuarios que buscan un servicio, mientras está en su fase beta.
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section class="contact container" id="formulario">
+            <h2 class="subtitle">¿Tienes alguna pregunta u opinión?</h2>
+            <p class="questions__paragraph">
+                Llena el formulario y déjanos saber tu inquietud. El equipo de soporte te responderá lo antes posible.
+            </p>
+            <form id="contactForm" class="contact-form" action="enviar.php" method="POST" onsubmit="return handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué deseas preguntar?" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Danos una breve descripción de tu inquietud" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Suscripción -->
+    <div id="popup-suscripcion" class="popup">
+        <div class="popup-content">
+            <img src="logo.png" alt="Logo de la empresa" class="popup-logo">
+            <h3>¡Recibe nuestras ofertas y novedades!</h3>
+            <p>Suscríbete a nuestro boletín...</p>
+            <form action="suscripción.php" method="POST" class="form-suscripcion">
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+            <button onclick="closePopup()">Cerrar</button>
+        </div>
+    </div>
+    <!-- Newsletter -->
+    <section class="newsletter container">
+        <h2>Siempre estaremos a su servicio, con compromiso, calidad y una sonrisa.</h2>
+    </section>
+        <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Servicely</h2>
+            <div class="footer-box">
+                <h3>Páginas</h3>
+                <a href="../inicio/inicio.html">Inicio</a>
+                <a href="../acerca_de/acerca_de.html">Acerca de</a>
+                <a href="../como_funciona/como_funciona.html">¿Cómo funciona?</a>
+            </div>
+            <div class="footer-box">
+                <h3>Extras</h3>
+                <a href="#">App 2026</a>
+                <a href="#formulario">Formulario de dudas</a>
+                <a href="../acerca_de/acerca_de.html#new">Equipo Servicely</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <a href="tel:+50767600681">+507 67600681</a>
+                <a href="mailto:servicelyplatform@outlook.com">servicelyplatform@outlook.com</a>
+                <div class="social">
+                    <a href="https://www.facebook.com/share/1Ajgz7Mrfu/?mibextid=wwXIfr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/servicely173596?s=11"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.instagram.com/servicelypty?igsh=bXRyc3l5YTloeW80" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Servicely Todos los Derechos Reservados</p>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        function openPopup(type) {
+            document.getElementById('popup-' + type).style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.querySelectorAll('.popup').forEach(popup => popup.style.display = 'none');
+        }
+
+        function openSuscripcionPopup() {
+            document.getElementById('popup-suscripcion').style.display = 'flex';
+        }
+
+        window.onload = () => {
+            setTimeout(openSuscripcionPopup, 10000);
+        }
+    </script>-->
+    <script src="js/IN-questions_digital.js"></script>
+    <script src="js/cambio_fondo.js"></script>
+</body>
+</html>

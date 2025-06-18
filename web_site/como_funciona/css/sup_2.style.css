@@ -1,0 +1,361 @@
+
+
+
+/* Utilidades básicas de Bootstrap usadas */
+.container {
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+/*---------------------------------------
+  HERO (ESTILO GENERAL Y RESPONSIVO)
+-----------------------------------------*/
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+
+.hero-title, .hero h2 {
+  background: var(--white-color);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .175);
+  border-radius: 5rem;
+  display: inline-block;
+  padding: 8px 24px;
+}
+
+.hero-title {
+  font-size: 44px;
+}
+
+.hero h2 {
+  font-size: 38px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-65%);
+  width: 60%;
+  max-width: 100%;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+
+.hero svg {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  pointer-events: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  align-items: center;
+}
+
+.col-lg-7 {
+  width: 58.333333%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.col-lg-5 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  text-align: right; 
+}
+
+
+/* Avatar */
+.avatar-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.avatar-image-large {
+  width: 80px;
+  height: 80px;
+}
+
+/* Imagenes */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex { display: flex !important; }
+.justify-content-center { justify-content: center !important; }
+.align-items-center { align-items: center !important; }
+.mb-4 { margin-bottom: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.ms-3 { margin-left: 1rem !important; }
+.position-relative { position: relative !important; }
+
+/*---------------------------------------
+  ABOUT              
+-----------------------------------------*/
+
+
+.about-image {
+  border-radius: 3rem;
+}
+
+.col-lg-6 {
+  width: 50%;
+  padding-left: 2.5rem;
+}
+
+.section-title-wrap h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  word-spacing: 0.01em; /* Ajusta este valor para más o menos espacio */
+  letter-spacing: 0.1px; /* espacio entre letras */
+}
+
+.section-title-wrap {
+  background-color: #0d6efd;
+  padding: 1.5rem;
+  border-radius: 1rem 1rem 0 0; /* superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.texto-centrado {
+  max-width: 600px;      /* Límite máximo de ancho, ajusta según prefieras */
+  margin: 0 auto;        /* Centra horizontalmente */
+  text-align: center;    /* Centra el texto dentro del contenedor */
+  padding: 0 10px;       /* Un poco de espacio a los lados para móviles */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: none;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+
+.text-white { color: #fff !important; }
+.me-4 { margin-right: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+.mt-lg-0 { margin-top: 0 !important; }
+.align-items-center { align-items: center !important; }
+.mb-0 { margin-bottom: 0 !important; }
+
+.about-thumb,
+.services-thumb,
+.profile-thumb {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: .5rem;
+}
+
+/* Responsivo */
+
+@media screen and (min-width: 991px) {
+  .hero {
+    height: auto;
+    width: auto;
+    position: flex;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  .hero {
+    height: auto;
+    width: auto;
+    position: flex;
+    margin-top: 5%;
+  }
+  .hero-title {
+    font-size: 28px;
+    padding: 6px 18px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+    padding: 6px 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-bottom: 150px;
+    margin-top: 0%;
+  }
+
+  .hero .row {
+    flex-direction: column;
+  }
+
+  .col-lg-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 0;
+    text-align: center;
+    top: 0;
+  }
+
+  .hero-image {
+    position: relative;
+    top: 0;
+    transform: none;
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    z-index: 2;
+    margin-top: 5%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    padding: 6px 18px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+    padding: 6px 18px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .hero-image {
+    align-items: center;
+    max-width: auto;
+    width: 100%;
+  }
+
+  .hero-title,
+  .hero h2 {
+    font-size: 22px;
+    padding: 5px 14px;
+  }
+
+  .hero {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .hero {
+    margin-top: 15%;
+  }
+
+}
+
+/* Making Responsive */
+@media (max-width: 1080px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /*.projects {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    display: flex;
+  }*/
+
+}
+
+@media (max-width: 442px) {
+  .about-text h2,
+  .heading h2,
+  .newsletter h2 {
+    font-size: 1.2rem;
+  }
+
+  .about {
+    margin-top: -50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about .row {
+    flex-direction: column; /* fuerza las columnas una debajo de la otra */
+  }
+
+  .about {
+    margin-top: -20%;
+  }
+
+  .col-11,
+  .col-123 {
+    width: 90% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .about-thumb {
+    margin-top: 1rem;
+    padding: 20px;
+    text-align: center; /* centra los elementos en móvil */
+  }
+
+  .section-title-wrap {
+    flex-direction: column; /* apila el h2 y el avatar */
+    text-align: center;
+  }
+
+  .section-title-wrap h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .section-title-wrap img {
+    margin: 0 auto;
+  }
+}

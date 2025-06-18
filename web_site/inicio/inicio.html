@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely | Inicio </title>
+    <!-- LInk To CSS -->
+    <link rel="stylesheet" href="css/inicio.style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="inicio.html" class="logo"><i class='bx bx-run bx-tada' style='color:#3492fd' ></i>Servicely</a>
+            <!-- Menu Icon -->
+            <input type="checkbox" name="" id="menu">
+            <label for="menu" <i class='bx bx-menu' id="menu-icon"></i></label>
+            <!-- Nav List -->
+            <ul class="navbar">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="../acerca_de/acerca_de.html">Acerca de</a></li>
+                <li><a href="../como_funciona/como_funciona.html">¿Cómo funciona?</a></li>
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+            </ul>
+            <!-- Log In Button -->
+            <a href="../login-sign_up/login.html" class="btn">Entrar</a>
+        </div>
+    </header>
+    <!-- Home -->
+    <section class="home container" id="home">
+        <div class="background-layer"></div> <!-- Capa de fondo controlable -->
+        <div class="home-text">
+            <h1>Encuentra o únete <span class="break-point">a la búsqueda</span> de tus servicios.</h1>
+            <a href="../login-sign_up/sign_up.html" class="btn">Iniciar</a>
+        </div>
+    </section>
+    <!-- About -->
+    <section class="about container" id="about">
+        <div class="about-img">
+            <img src="images/equipo.webp" alt="">
+        </div>
+        <div class="about-text">
+            <span>Acerca de </span>
+            <h2>Desarrollado por un  <br>Equipo Comprometido </h2>
+            <p>Somos un grupo de jóvenes del programa educativo Centro ¡Supérate!, una iniciativa que potencia el talento de estudiantes sobresalientes en áreas como inglés, tecnología y valores.</p>
+            <p>Unidos por nuestra pasión por el desarrollo web y el impacto social, creamos esta plataforma para conectar personas que brindan y necesitan servicios de calidad.</p>
+            <p> "La base para un proyecto son sus valores" </p>
+            <a href="../acerca_de/acerca_de.html" class="btn">Más información</a>
+        </div>
+    </section>
+    <!-- Sales -->
+    <section class="sales container" id="sales">
+        <!-- Box 1 -->
+        <div class="box">
+            <i class='bx bx-search-alt-2'></i>
+            <h3>Encuentra Profesionales </h3>
+            <p>Accede a una red verificada de expertos en plomería, electricidad, jardinería y más.</p>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <i class='bx bx-hard-hat'></i>
+            <h3>Ofrece Tus Servicios</h3>
+            <p>Crea tu perfil, muestra tu experiencia y empieza a recibir contrataciones fácilmente.</p>
+        </div>
+        <!-- Box 1 -->
+        <div class="box">
+            <i class='bx bx-calendar-edit'></i>
+            <h3>Contrataciones Seguras</h3>
+            <p>Evaluaciones, historial y soporte para que cada servicio sea claro, justo y confiable.</p>
+        </div>
+    </section>
+    <!-- Properties -->
+    <section class="properties container" id="properties">
+        <div class="heading">
+            <span>Servicios</span>
+            <h2>Algunos de nuestros servicios</h2>
+            <p>Servicios que puedes encontrar o brindar <br> en nuestra página web.  </p>
+        </div>
+        <!-- Services -->
+        <div class="service-content">
+          <div class="ser-box">
+            <img src="images/plomería.webp" alt="" />
+            <p>Plomería</p>
+          </div>
+          <div class="ser-box">
+            <img src="images/jardinería.webp" alt="" /> 
+            <p>Jardinería</p>
+          </div>
+          <div class="ser-box">
+            <img src="images/Electricista.webp" alt="" />
+            <p>Electricista</p>
+          </div>
+          <div class="ser-box">
+            <img src="images/Carpintería.webp" alt="" />
+            <p>Carpintería</p>
+          </div>
+          <div class="ser-box">
+            <img src="images/Pintor.webp" alt="" />
+            <p>Pintura</p>
+          </div>
+        </div>
+    </section>
+   
+    <!-- Customers -->
+    <section class="customers" id="customers">
+        <h2>Comentarios de nuestros usuarios</h2>
+
+        <!-- Customer Carousel -->
+        <div class="customers-carousel-container">
+            <div class="carousel-controls">
+                <button id="prevBtn">←</button>
+                <button id="nextBtn">→</button>
+            </div>
+            <div class="customers-carousel" id="carousel">
+            <!-- Comentarios se insertan dinámicamente con JS -->
+            </div>
+        </div>
+
+        <!-- Botón para agregar comentario -->
+        <div class="add-comment-btn-container">
+            <button id="openModalBtn" class="add-comment-btn">
+            Agregar comentario
+            </button>
+        </div>
+
+        <!-- Modal de comentario -->
+        <div id="commentModal" class="modal">
+            <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h3>Escribe tu nombre</h3>
+            <input id="commentname" placeholder="Tu nombre"></input>
+            <h3>Escribe tu calificación</h3>
+            <input id="commentgrade" placeholder="Calificación entre 1.0 y 5.0"></input>
+            <h3>Escribe tu comentario</h3>
+            <textarea id="commentText" rows="5" placeholder="Tu comentario..."></textarea>
+            <button id="submitCommentBtn" class="submit-comment-btn">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter container">
+        <h2>¿Tienes alguna pregunta u opinión?<br>Déjanos saber</h2>
+        <form action="">
+            <a href="../contacto/contacto.html" class="btn">Contáctanos</a>
+        </form>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Servicely</h2>
+            <div class="footer-box">
+                <h3>Páginas</h3>
+                <a href="../acerca_de/acerca_de.html">Acerca de</a>
+                <a href="../como_funciona/como_funciona.html">¿Cómo funciona?</a>
+                <a href="../contacto/contacto.html">Contacto</a>
+            </div>
+            <div class="footer-box">
+                <h3>Extras</h3>
+                <a href="#">App 2026</a>
+                <a href="../contacto/contacto.html#formulario">Formulario de dudas</a>
+                <a href="../acerca_de/acerca_de.html#new">Equipo Servicely</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <a href="tel:+50767600681">+507 67600681</a>
+                <a href="mailto:servicelyplatform@outlook.com">servicelyplatform@outlook.com</a>
+                <div class="social">
+                    <a href="https://www.facebook.com/share/1Ajgz7Mrfu/?mibextid=wwXIfr" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/servicely173596?s=11"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.instagram.com/servicelypty?igsh=bXRyc3l5YTloeW80" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Servicely Todos los Derechos Reservados </p>
+    </div>
+    <script src="js/comentario.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/cambio_fondo.js"></script>
+</body>
+</html>

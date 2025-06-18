@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicely | Cambio</title>
+    <!-- LInk To CSS -->
+    <link rel="stylesheet" href="css/old_cont.style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="../inicio/inicio.html" class="logo"><i class='bx bx-run bx-tada' style='color:#3492fd' ></i>Servicely</a>
+        </div>
+
+    </header>
+    <!-- Cambio de contraseña -->
+    <div class="login container">
+        <div class="login-container">
+            <h2>Cambio de contraseña</h2>
+            <p>Ingresa una nueva contraseña para realizar el cambio.</p>
+            <!-- Ingreso de cambio -->
+            <form action="" id="formulario-recuperar">
+                <span>Ingresa la nueva contraseña</span>
+                <input type="password" name="" id="contraseña" placeholder="Escribe la contraseña" required>
+                <span>Repite la nueva contraseña</span>
+                <input type="password" name="" id="r_contraseña" placeholder="Repite la contraseña" required>
+                <button type="submit" class="submit-button">Cambiar contraseña</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>La contraseña se cambió exitosamente. <span id="correoMostrado"></span></p>
+            <button id="cerrarModal">Iniciar sesión</button>
+        </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Servicely Todos los Derechos Reservados </p>
+    </div>
+    <script src="js/ventana_cambio.js"></script>
+</body>
+</html>
